@@ -2292,279 +2292,381 @@
     </style>
     <!-- ===========================================================LOCATION -->
 
+    
     <style>
         :root {
-            --locate-bg: #ffffff;
-            --locate-fg: #e9ecf7;
-            --locate-muted: #9aa3bd;
-            --locate-brand: #7aa2ff;
-            --locate-brand2: #c2ff73;
-            --locate-card: #ffffff;
-            --locate-stroke: #ffffff;
+            --navy: #0f2040;
+            --navy-md: #1a3460;
+            --white: #ffffff;
+            --off-white: #f4f6f9;
+            --gold: #c8a84b;
+            --muted: #6b7b94;
+            --border: #d6dde6;
+            --shadow: rgba(15, 32, 64, .12);
         }
 
-        body::before {
-            content: "";
-            position: fixed;
-            inset: -100px;
-            background-image:
-                radial-gradient(2px 2px at 20px 30px, rgba(255, 255, 255, .06) 50%, transparent 52%),
-                radial-gradient(2px 2px at 40px 60px, rgba(255, 255, 255, .05) 50%, transparent 52%),
-                radial-gradient(2px 2px at 80px 20px, rgba(255, 255, 255, .04) 50%, transparent 52%);
-            background-size: 100px 100px, 120px 120px, 140px 140px;
-            mix-blend-mode: overlay;
-            opacity: .6;
-            pointer-events: none;
-            z-index: 0;
+        /* ── SECTION ── */
+        .edu-section {
+            padding: 80px 0 90px
         }
 
-        .locate-wrap {
+        /* ── LEFT: Single unified card ── */
+        .edu-left-card {
+            background: var(--white);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 2px 20px var(--shadow);
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            opacity: 0;
+            transform: translateY(24px);
+            transition: opacity .6s ease, transform .6s cubic-bezier(.22, 1, .36, 1);
+        }
+
+        .edu-left-card.show {
+            opacity: 1;
+            transform: translateY(0)
+        }
+
+        /* ── Logo area (navy bg) ── */
+        .edu-left-card__logo {
+            background: linear-gradient(135deg, var(--navy) 0%, var(--navy-md) 100%);
+            padding: 40px 28px 44px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            position: relative;
+        }
+
+        /* wave cut bottom */
+        .edu-left-card__logo::after {
+            content: '';
+            position: absolute;
+            bottom: -1px;
+            left: 0;
+            right: 0;
+            height: 24px;
+            background: var(--white);
+            border-radius: 50% 50% 0 0 / 100% 100% 0 0;
+        }
+
+        .edu-left-card__logo-img {
+            width: 126px;
+            height: 126px;
+            border-radius: 18px;
+            background: rgb(255, 255, 255);
+            border: 2px solid rgba(255, 255, 255, .18);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            opacity: 0;
+            transform: scale(.88);
+            transition: opacity .5s ease .25s, transform .5s cubic-bezier(.22, 1, .36, 1) .25s;
+        }
+
+        .edu-left-card.show .edu-left-card__logo-img {
+            opacity: 1;
+            transform: scale(1)
+        }
+
+        .edu-left-card__logo-img img {
+            max-width: 70%;
+            max-height: 70%;
+            object-fit: contain;
+           
+        }
+
+        .edu-left-card__logo-text {
+            text-align: center;
             position: relative;
             z-index: 1;
-            padding: 40px 20px;
+            opacity: 0;
+            transform: translateY(8px);
+            transition: opacity .5s ease .4s, transform .5s cubic-bezier(.22, 1, .36, 1) .4s;
         }
 
-        .locate-title {
-
-            text-align: center;
-            font-weight: 800;
-            color: #00113a;
-            margin-bottom: 10px;
+        .edu-left-card.show .edu-left-card__logo-text {
+            opacity: 1;
+            transform: translateY(0)
         }
 
-        .locate-lede {
-            text-align: center;
-            color: black;
-            margin-bottom: 40px;
+        .edu-left-card__logo-text h3 {
+            font-size: 1.42rem;
+            font-weight: 700;
+            color: var(--white);
+            line-height: 1.3;
+            margin-bottom: 5px;
         }
 
-        .locate-grid {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: grid;
-            gap: 28px;
-            grid-template-columns: 1.05fr 1.7fr;
-            align-items: stretch;
-
-        }
-
-        @media (max-width: 980px) {
-            .locate-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        .locate-card {
-            background: var(--locate-card);
-            border: 1px solid var(--locate-stroke);
-            border-radius: 10px;
-            /* box-shadow: 0 10px 20px rgba(0, 0, 0, .45); */
-            overflow: hidden;
-            position: relative;
-            border: 2px solid rgba(28, 72, 113, 0.236) !important;
-
-        }
-
-        .locate-card-inner {
-            padding: 28px;
-            display: grid;
-            gap: 18px;
-            align-content: start;
-        }
-
-        .locate-logo {
-            height: 180px;
-            border-radius: 18px;
-            display: grid;
-            place-items: center;
-            overflow: hidden;
-            outline: 1px solid var(--locate-stroke);
-        }
-
-        .locate-logo img {
-            max-width: 72%;
-            max-height: 72%;
-            object-fit: contain;
-        }
-
-        .locate-name {
+        .edu-left-card__logo-text p {
+            font-size: .68rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2.2px;
+            color: var(--gold);
             margin: 0;
-            font-size: clamp(18px, 1.8vw, 24px);
-            font-weight: 800;
-            letter-spacing: .2px;
-            color: #00113a;
         }
 
-        .locate-addr {
-            margin: 0;
-            color: var(--locate-muted);
-        }
-
-        .locate-meta {
+        /* ── Address area ── */
+        .edu-left-card__addr {
+            padding: 28px 26px 32px;
+            flex: 1;
             display: flex;
-            gap: 10px;
-            flex-wrap: wrap;
+            flex-direction: column;
+            justify-content: center;
+            gap: 0;
+            opacity: 0;
+            transform: translateY(10px);
+            transition: opacity .5s ease .52s, transform .5s cubic-bezier(.22, 1, .36, 1) .52s;
         }
 
-        .locate-tag {
-            display: inline-flex;
+        .edu-left-card.show .edu-left-card__addr {
+            opacity: 1;
+            transform: translateY(0)
+        }
+
+        .edu-left-card__addr-label {
+            display: flex;
             align-items: center;
             gap: 8px;
-            padding: 8px 12px;
-            background: #0f1430;
-            color: #cbd7ff;
-            border: 1px solid #1c244a;
-            border-radius: 999px;
+            margin-bottom: 14px;
         }
 
-        .locate-map {
-            position: relative;
-            border-radius: 20px;
-            background: var(--locate-card);
-            border: 8px solid rgb(28, 72, 113);
-            overflow: hidden;
-            /* box-shadow: 0 30px 60px rgba(0, 0, 0, .45); */
+        .edu-left-card__addr-label i {
+            width: 32px;
+            height: 32px;
+            border-radius: 8px;
+            background: var(--off-white);
+            border: 1px solid var(--border);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: red;
+            font-size: 1rem;
         }
 
-        .locate-map-frame {
-            position: relative;
+        .edu-left-card__addr-label span {
+            font-size: 1rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1.4px;
+            color: var(--muted);
+        }
+
+        /* gold underline */
+        .edu-left-card__addr-line {
             width: 100%;
-            padding-bottom: 56.25%;
+            height: 1px;
+            background: var(--border);
+            margin-bottom: 14px;
+            position: relative;
+            overflow: hidden;
         }
 
-        .locate-map-frame iframe {
+        .edu-left-card__addr-line::after {
+            content: '';
             position: absolute;
-            inset: 0;
+            top: 0;
+            left: 0;
+            width: 40px;
+            height: 100%;
+            background: var(--gold);
+            border-radius: 1px;
+        }
+
+        .edu-left-card__addr p {
+            font-size: .84rem;
+            color: var(--navy);
+            line-height: 1.7;
+            margin: 0;
+        }
+
+        /* ── MAP ── */
+        .edu-map-wrap {
+            height: 100%;
+            min-height: 480px;
+            border-radius: 16px;
+            overflow: hidden;
+            border: 1px solid var(--border);
+            box-shadow: 0 4px 24px var(--shadow);
+            position: relative;
+            background: var(--navy);
+            opacity: 0;
+            transform: translateX(28px);
+            transition: opacity .7s ease .08s, transform .7s cubic-bezier(.22, 1, .36, 1) .08s
+        }
+
+        .edu-map-wrap.show {
+            opacity: 1;
+            transform: translateX(0)
+        }
+
+        .edu-map-wrap iframe {
             width: 100%;
             height: 100%;
             border: 0;
+            display: block
         }
 
-        .locate-actions {
+        /* Map Badge */
+        .edu-map-badge {
             position: absolute;
-            left: 14px;
-            bottom: 14px;
-            display: flex;
-            gap: 12px;
+            top: 16px;
+            left: 16px;
             z-index: 2;
-        }
-
-        .locate-btn {
-            position: relative;
-            isolation: isolate;
-            display: inline-flex;
+            background: var(--white);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 10px 16px;
+            display: flex;
             align-items: center;
             gap: 10px;
-            padding: 12px 16px;
-            border-radius: 14px;
-            text-decoration: none;
-            color: #0a0b13;
-            font-weight: 800;
-            background: linear-gradient(180deg, #7bb4ff, #0095ff);
-            box-shadow: 0 16px 30px rgba(127, 166, 255, .35);
-            transform: translateZ(0);
-            transition: transform .2s ease;
-        }
-
-        .locate-btn.alt {
-            background: linear-gradient(180deg, #e2a23a, #ff8c00);
-            box-shadow: 0 16px 30px rgba(183, 255, 90, .28);
-        }
-
-        .locate-btn-dot {
-            width: 6px;
-            height: 6px;
-            border-radius: 50%;
-            background: #0a0b13;
-            opacity: .7;
-        }
-
-        .locate-magnet {
-            padding: 16px;
-            margin: -16px;
-            border-radius: 20px;
-        }
-
-        .locate-reveal {
+            box-shadow: 0 4px 14px var(--shadow);
             opacity: 0;
-            transform: translateY(14px);
-            transition: .6s cubic-bezier(.2, .8, .2, 1);
+            transform: translateY(-10px);
+            transition: opacity .5s ease .75s, transform .5s cubic-bezier(.22, 1, .36, 1) .75s
         }
 
-        .locate-reveal.on {
+        .edu-map-wrap.show .edu-map-badge {
             opacity: 1;
-            transform: none;
+            transform: translateY(0)
         }
 
-        .locate-map,
-        .locate-reveal {
-            position: relative;
-            border: 5px solid transparent;
-            border-image: linear-gradient(90deg, rgb(0, 50, 136), var(--orange)) 1;
-            border-radius: 20px;
-            /* optional – gives soft corners */
-            color: #fff;
+        .edu-map-badge__dot {
+            width: 9px;
+            height: 9px;
+            border-radius: 50%;
+            background: #2ecc71;
+            box-shadow: 0 0 0 3px rgba(46, 204, 113, .25);
+            animation: badgePing 2.4s infinite
+        }
 
-            transition: all 0.4s ease;
-            overflow: hidden;
+        @keyframes badgePing {
+
+            0%,
+            100% {
+                box-shadow: 0 0 0 3px rgba(46, 204, 113, .25)
+            }
+
+            50% {
+                box-shadow: 0 0 0 6px rgba(46, 204, 113, 0)
+            }
+        }
+
+        .edu-map-badge__text {
+            font-size: .7rem;
+            font-weight: 600;
+            color: var(--navy);
+            letter-spacing: .4px
+        }
+
+        .edu-map-badge__text span {
+            display: block;
+            font-weight: 400;
+            color: var(--muted);
+            font-size: .64rem;
+            margin-top: 1px
+        }
+
+        /* ── RESPONSIVE ── */
+        @media(max-width:991px) {
+            .edu-map-wrap {
+                min-height: 340px
+            }
+
+            .edu-left-card {
+                height: auto
+            }
+        }
+
+        @media(max-width:767px) {
+            .edu-section {
+                padding: 52px 0 60px
+            }
+
+            .edu-map-wrap {
+                min-height: 280px
+            }
         }
     </style>
 
-    <main class="locate-wrap" aria-labelledby="locate-title">
-        <h4 id="locate-title" class="locate-title fs-3">Locate the School</h4>
-        <p class="locate-lede">A kinetic split with magnetic actions, grain, and scroll-revealed hierarchy for a
-            premium,
-            editorial feel.</p>
 
-        <section class="locate-grid" aria-label="College location">
-            <article class="locate-card locate-reveal">
-                <div class="locate-card-inner">
-                    <div class="locate-logo">
-                        <img src="https://api.learntechww.com/college_logo/logo1747827527413.webp" alt="College logo">
+    <section class="edu-section">
+        <div class="container">
+            <h4 class="fs-2 text-center mb-5">Locate the School</h4>
+            <div class="row g-4 align-items-stretch">
+
+                <!-- LEFT -->
+                <div class="col-lg-5">
+                    <div class="edu-left-card" id="leftCard">
+
+                        <!-- Logo + Title inside navy strip -->
+                        <div class="edu-left-card__logo">
+                            <div class="edu-left-card__logo-img">
+                                <img src="https://api.learntechww.com/college_logo/logo1747827527413.webp" alt="Logo">
+                            </div>
+                            <div class="edu-left-card__logo-text">
+                                <h3>New Horizon International School<br> (NHIS)</h3>
+                            </div>
+                        </div>
+
+                        <!-- Address -->
+                        <div class="edu-left-card__addr">
+                            <div class="edu-left-card__addr-label">
+                                <i class="fa-solid fa-location-dot"></i>
+                                <span>Campus Address</span>
+                            </div>
+                            <div class="edu-left-card__addr-line"></div>
+                            <p>Sy No. 38, Thirumenahalli Village, Yelahanka, Hobli, Bangalore North Taluk, Bengaluru –
+                                560089</p>
+                        </div>
+
                     </div>
-                    <h2 class="locate-name">Vidya Bharath College of Pharmacy, Bangalore</h2>
-                    <p class="locate-addr text-dark">Sy No. 38, Thirumenahalli Village, Yelahanka, Hobli, Bangalore
-                        North Taluk,
-                        Bengaluru – 560089</p>
-
                 </div>
-            </article>
 
-            <aside class="locate-map locate-reveal">
-                <div class="locate-map-frame">
-                    <iframe loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen
-                        src="https://www.google.com/maps?q=Vidya%20Bharath%20College%20of%20Pharmacy%20Bengaluru&output=embed"></iframe>
+                <!-- RIGHT: Map untouched -->
+                <div class="col-lg-7">
+                    <div class="edu-map-wrap" id="mapWrap">
+                        <div class="edu-map-badge">
+                            <div class="edu-map-badge__dot"></div>
+                            <div class="edu-map-badge__text">
+                                Vidya Bharath College
+                                <span>Yelahanka, Bengaluru</span>
+                            </div>
+                        </div>
+                        <iframe loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen
+                            src="https://www.google.com/maps?q=Vidya%20Bharath%20College%20of%20Pharmacy%20Bengaluru&output=embed"></iframe>
+                    </div>
                 </div>
-            </aside>
-        </section>
-    </main>
 
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
     <script>
-        const locateObs = new IntersectionObserver((entries) => {
-            entries.forEach(e => {
-                if (e.isIntersecting) {
-                    e.target.classList.add('on');
-                    locateObs.unobserve(e.target);
-                }
-            });
-        }, { threshold: 0.18 });
-
-        document.querySelectorAll('.locate-reveal').forEach(el => locateObs.observe(el));
-
-        document.querySelectorAll('.locate-magnet').forEach(container => {
-            const link = container.querySelector('.locate-btn');
-            const strength = 18;
-            container.addEventListener('mousemove', e => {
-                const r = container.getBoundingClientRect();
-                const x = (e.clientX - (r.left + r.width / 2)) / (r.width / 2);
-                const y = (e.clientY - (r.top + r.height / 2)) / (r.height / 2);
-                link.style.transform = `translate(${x * strength}px, ${y * strength}px)`;
-            });
-            container.addEventListener('mouseleave', () => {
-                link.style.transform = 'translate(0,0)';
-            });
-        });
+        (function () {
+            function revealOnScroll(id, delay) {
+                const el = document.getElementById(id);
+                if (!el) return;
+                const obs = new IntersectionObserver((entries) => {
+                    entries.forEach(({ target, isIntersecting }) => {
+                        if (!isIntersecting) return;
+                        setTimeout(() => target.classList.add('show'), delay);
+                        obs.unobserve(target);
+                    });
+                }, { threshold: 0.18, rootMargin: '0px 0px -30px 0px' });
+                obs.observe(el);
+            }
+            revealOnScroll('leftCard', 0);
+            revealOnScroll('mapWrap', 80);
+        })();
     </script>
+
 
 
 
