@@ -94,7 +94,7 @@
         font-family: "Poppins" !important;
         scroll-behavior: smooth;
         overflow-x: hidden;
-        background-color: #f9f9f9;
+        background: linear-gradient(deg, rgba(0, 34, 107, 1) 0%, rgba(117, 169, 200, 1)100%);
     }
 
     h1 {
@@ -112,7 +112,7 @@
         color: red;
     }
 
- 
+
     .city-btn {
         display: inline-block;
         padding: 6px 32px;
@@ -553,119 +553,135 @@
 
     <!-- ====================================================================================banner -->
 
-    <div class="container text-center py-0 mb-5">
+<style>
+    .error-illustration span {
+        font-size: 160px;
+        font-weight: 900;
+        color: #001a4f;
+        opacity: 1;
+        text-shadow:
+            1px 1px 0 #75a9c8,
+            2px 2px 0 #75a9c8,
+            3px 3px 0 #75a9c8,
+            4px 4px 0 #75a9c8,
+            6px 6px 15px rgba(0, 0, 0, 0.25);
+    }
 
-        <!-- Illustration -->
-        <img src="404.jpg" alt="404" class="img-fluid mb-4" style="max-width:260px;">
+    .error-illustration {
+        position: relative;
+        margin-bottom: 30px;
+    }
 
-        <h4 class="fw-bold">Page Not Found</h4>
-        <p class="text-muted mb-1 fs-6" style="max-width:600px;margin:auto;">
-            Check that you typed the address correctly, go back to your previous page
-            or try using our site search to find something specific.
-        </p>
+    .error-illustration .icon {
+        position: absolute;
+        bottom: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 50px;
+    }
 
-        <a href="#" class="btn mt-2 px-5 py-3 mb-5" style="background:#0c2a45;color:white;font-weight:500;">
-            Go to Homepage
-        </a>
+    .btn-primary-custom {
+        background: #001a4f;
+        border: none;
+    }
 
-        <h5 class="fw-semibold mb-3">Here are a few links that might be helpful:</h5>
+    .btn-primary-custom:hover {
+        background: #1d4ed8;
+    }
 
-        <!-- Grid of Categories -->
-        <div class="row g-3 justify-content-center">
+    .submit-btn {
+        background:#001a4f;
+        border: none;
+    }
 
-            <div class="col-md-2 col-6">
-                <div class="card-custom">Engineering & Architecture</div>
+    .submit-btn:hover {
+        box-shadow: 0 12px 25px rgba(37, 99, 235, 0.35);
+    }
+
+    .form-control {
+        background: #f8fafc;
+        border: 1.5px solid #e2e8f0;
+    }
+
+    .form-control:focus {
+        background: #fff;
+        border-color: #2563eb;
+        box-shadow: none;
+    }
+
+    /* Center the left content better */
+    .left-content-wrapper {
+        max-width: 520px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    @media (min-width: 992px) {
+        .left-content-wrapper {
+            margin-left: auto;
+            margin-right: 0;
+        }
+    }
+</style>
+
+<section class="container py-5">
+    <div class="row g-2 align-items-center">
+
+        <!-- LEFT CONTENT -->
+        <div class="col-lg-7 px-5">
+            <div class="left-content-wrapper">
+                <div class="text-center text-lg-start">
+                    <div class="error-illustration">
+                        <span>4<span style="color: #75a9c8;">0</span>4</span>
+                        <div class="icon">🚀</div>
+                    </div>
+
+                    <h1 class="display-4 fw-bold text-primary-emphasis mb-3">Page not found</h1>
+                    <p class="text-secondary fs-6 mb-4" style="line-height: 1.6;">
+                        You either tried some shady route or you came here by mistake. Whichever it is, try using the
+                        navigation
+                    </p>
+
+                    <a href="/" class="btn btn-primary btn-primary-custom btn-lg px-4 fw-semibold rounded-3">
+                        Back to Home
+                    </a>
+                </div>
             </div>
+        </div>
 
-            <div class="col-md-2 col-6">
-                <div class="card-custom">Management & Business</div>
-            </div>
+        <!-- RIGHT CONTACT FORM -->
+        <div class="col-lg-5 px-5">
+            <div class="bg-white p-4 rounded-4 shadow-lg">
+                <h2 class="fs-4 fw-bold text-primary-emphasis text-center mb-4">Contact Us</h2>
 
-            <div class="col-md-2 col-6">
-                <div class="card-custom">Law</div>
-            </div>
+                <form action="#" method="post">
+                    <div class="mb-3">
+                        <input type="text" class="form-control rounded-3 py-2" placeholder="Enter Name" required>
+                    </div>
 
-            <div class="col-md-2 col-6">
-                <div class="card-custom">Animation & Design</div>
-            </div>
+                    <div class="mb-3">
+                        <input type="email" class="form-control rounded-3 py-2" placeholder="Enter Email" required>
+                    </div>
 
-            <div class="col-md-2 col-6">
-                <div class="card-custom">Media & Journalism</div>
-            </div>
+                    <div class="mb-3">
+                        <input type="tel" class="form-control rounded-3 py-2" placeholder="Enter Phone Number">
+                    </div>
 
-            <div class="col-md-2 col-6">
-                <div class="card-custom">Medicine & Allied Sciences</div>
-            </div>
+                    <div class="mb-3">
+                        <textarea class="form-control rounded-3 py-2" rows="2" placeholder="Enter message"
+                            required></textarea>
+                    </div>
 
-            <div class="col-md-2 col-6">
-                <div class="card-custom">Humanities & Social Science</div>
+                    <button type="submit" class="btn btn-primary submit-btn w-100 py-2 fw-semibold rounded-3">
+                        Submit
+                    </button>
+                </form>
             </div>
-
-            <div class="col-md-2 col-6">
-                <div class="card-custom">Commerce</div>
-            </div>
-
-            <div class="col-md-2 col-6">
-                <div class="card-custom">Computer Applications & IT</div>
-            </div>
-
-            <div class="col-md-2 col-6">
-                <div class="card-custom">Pharmacy</div>
-            </div>
-
-            <div class="col-md-2 col-6">
-                <div class="card-custom">Hospitality & Tourism</div>
-            </div>
-
-            <div class="col-md-2 col-6">
-                <div class="card-custom">Competition</div>
-            </div>
-
-            <div class="col-md-2 col-6">
-                <div class="card-custom">Schools</div>
-            </div>
-
-            <div class="col-md-2 col-6">
-                <div class="card-custom">Certifications</div>
-            </div>
-            <div class="col-md-2 col-6">
-                <div class="card-custom">Certifications</div>
-            </div>
-            <div class="col-md-2 col-6">
-                <div class="card-custom">Certifications</div>
-            </div>
-
         </div>
 
     </div>
-    <style>
-        body {
-            font-family: "Inter", sans-serif;
-            background: #f7f8fc;
-        }
-
-        header {
-            text-align: center;
-            padding: 30px 0;
-            font-size: 32px;
-            font-weight: 700;
-            color: #4f4f9f;
-        }
-
-        .card-custom {
-            border: 1px solid #eee;
-            padding: 10px;
-            background: #def4ff;
-            border-radius: 10px;
-            transition: 0.2s;
-            cursor: pointer;
-            font-size: 13px;
-            height: 70px;
-            width: 170px;
-        }
-    </style>
-
-
+</section>
+  
 
 
     <!-- Footer -->

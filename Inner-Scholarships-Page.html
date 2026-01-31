@@ -31,8 +31,8 @@
 </head>
 <style>
     .btn-8 {
-        background: #ffffff;
-        color: #003a73;
+        background: #003a73;
+        color: #ffffff;
         font-weight: 700;
         border: 2px solid #003a73;
         padding: 0.8rem 3rem;
@@ -50,7 +50,7 @@
         content: "";
         position: absolute;
         inset: 0;
-        background: #003a73;
+        background: hsl(0, 0%, 100%);
 
         --progress: 100%;
         clip-path: polygon(0 calc(var(--progress) / 2),
@@ -68,7 +68,7 @@
     }
 
     .btn-8:hover {
-        color: #ffffff;
+        color: #003a73;
         border: 2px solid #003a73;
         box-shadow: 0 12px 30px rgba(0, 0, 0, .25);
     }
@@ -117,7 +117,7 @@
         color: red;
     }
 
-   .city-btn {
+    .city-btn {
         display: inline-block;
         padding: 4px 22px;
         font-size: 15px;
@@ -293,105 +293,6 @@
 
     /* ---------------------------------------------------------------------blue button  */
 
-    .btn-lg,
-    .btn-lg *,
-    .btn-lg :after,
-    .btn-lg :before,
-    .btn-lg:after,
-    .btn-lg:before {
-        border: 0 solid;
-        box-sizing: border-box;
-    }
-
-    .btn-lg {
-        -webkit-tap-highlight-color: transparent;
-        -webkit-appearance: button;
-        background-color: #fff;
-        background-image: none;
-        color: #0b2a66;
-        cursor: pointer;
-        font-size: 100%;
-        font-weight: 900;
-        line-height: 1.5;
-        margin: 0;
-        -webkit-mask-image: -webkit-radial-gradient(#fff, #fff);
-        padding: 0;
-        text-transform: uppercase;
-    }
-
-    .btn-lg:disabled {
-        cursor: default;
-    }
-
-    .btn-lg:-moz-focusring {
-        outline: auto;
-    }
-
-    .btn-lg svg {
-        display: block;
-        vertical-align: middle;
-    }
-
-    .btn-lg [hidden] {
-        display: none;
-    }
-
-    .btn-lg {
-        border-radius: 3px;
-        border-width: 2px;
-        overflow: hidden;
-        padding: 0.8rem 3rem;
-        position: relative;
-
-    }
-
-    .btn-lg span {
-        mix-blend-mode: difference;
-    }
-
-    .btn-lg:after,
-    .btn-lg:before {
-        --tilt: 1.2rem;
-        background: #0b2a66;
-
-        -webkit-clip-path: polygon(0 0,
-                calc(100% - var(--tilt)) 0,
-                100% 50%,
-                calc(100% - var(--tilt)) 100%,
-                0 100%);
-        clip-path: polygon(0 0,
-                calc(100% - var(--tilt)) 0,
-                100% 50%,
-                calc(100% - var(--tilt)) 100%,
-                0 100%);
-        content: "";
-        display: block;
-        height: 100%;
-        left: calc(-100% - var(--tilt));
-        position: absolute;
-        top: 0;
-        transform: translateX(var(--progress, 0));
-        transition: transform 0.2s ease;
-        width: calc(100% + var(--tilt));
-        color: white !important;
-
-
-    }
-
-    .btn-lg:after {
-        left: 100%;
-        transform: translateX(var(--progress, 0)) rotate(180deg);
-        z-index: -1;
-    }
-
-    .btn-lg:hover:before {
-        --progress: 100%;
-    }
-
-    .btn-lg:hover:after {
-        --progress: -100%;
-    }
-
 
 
     /* ---------------------------------------------------------------home search bar */
@@ -401,7 +302,6 @@
     }
 
     .search__input {
-        font-family: "Open Sans", sans-serif;
         font-size: 17px;
         color: #333333;
         background-color: #f4f2f2ba;
@@ -891,8 +791,8 @@
         <div class="logo"><img src="https://www.keralastudy.com/images/logo.png" class="w-100" alt=""></div>
         <div class="nav-links">
             <div class="nav-item">Top Colleges</div>
-       
-                <div class="nav-item">Top Courses</div>
+
+            <div class="nav-item">Top Courses</div>
 
             <div class="nav-item">Entrance Exam</div>
             <div class="nav-item">Boards</div>
@@ -1348,9 +1248,9 @@
 
     <!-- ====================================================================================banner -->
 
-     <section class="hero-40vh">
-        <div class="hero-inner container-fluid mt-5">
-            <div class="row">
+    <section class="hero-40vh">
+        <div class="hero-inner container ">
+            <div class="row g-0">
                 <div class="col-lg-2 d-flex justify-content-center align-items-start text-center">
                     <div class="college-logo">
                         <img src="https://api.learntechww.com/scholarships_logo/logo1721825143149.jpg"
@@ -1359,8 +1259,8 @@
                 </div>
                 <style>
                     .college-logo {
-                        width: 120px;
-                        height: 120px;
+                        width: 100px;
+                        height: 100px;
                         background: #fff;
                         border-radius: 20px;
                         /* smooth modern shape */
@@ -1379,12 +1279,12 @@
                 </style>
 
                 <div class="col-lg-9 text-start">
-                    <h1 class="text-white">Dr. Ambedkar Scholarship: Eligibility, Deadline, Amount <span
+                    <h1 class="text-white mb-4">Dr. Ambedkar Scholarship: Eligibility, Deadline, Amount <span
                             style="color: #75a9c8;"> </span></h1>
 
                     <div class="application-bar">
                         <div class="app-left">
-                            <span class="icon"><i class="fa-regular fa-alarm-clock" style="color: #cd3131;"></i></span>
+                            <span class="icon"><i class="fa-regular fa-alarm-clock" style="color: #e42b2b;"></i></span>
                             <span class="text">
                                 <strong>Last Date of Application:</strong> July 24, 2024
                             </span>
@@ -1394,18 +1294,49 @@
                             <span class="currency">₹</span>
                             <span class="price">INR 1200 per annum</span>
                         </div>
+                         <span class="hero-badge merit"><span class="text-dark">Type:</span> Merit-Based</span>
                     </div>
+                    
+                   
+                    <!-- <span class="mt-2 d-inline-block type">
+                        <strong>Type :</strong> <span class="fw-semibold text-decoration-underline">
+                            Merit-Based
+                        </span>
+                    </span> -->
+                    <style>
+                        .type {
+                            font-size: 18px;
+                            margin-top: 6px;
+                            display: inline-block;
+                        }
+                    </style>
+
+                    <style>
+                        .hero-badge {
+                            display: inline-block;
+                            font-size: 15px;
+                            font-weight: 700;
+                            padding: 10px 22px;
+                            border-radius: 7px;
+                            white-space: nowrap;
+                            border: 1px solid #cfe7ff;
+                            background: #e6f4ff;
+                            color: #0056b3;
+                            backdrop-filter: blur(6px);
+                            transition: all 0.3s ease;
+                        }
+                    </style>
                     <style>
                         .application-bar {
                             background: #ffffffa9;
                             /* deep blue */
                             color: #000000;
-                            padding: 14px 24px;
+                            padding: 7px 14px;
                             border-radius: 8px;
                             display: flex;
                             align-items: center;
                             justify-content: space-between;
-                            font-family: 'Segoe UI', sans-serif;
+
                             font-size: 16px;
                         }
 
@@ -1451,11 +1382,11 @@
 
 
                     <div class="cta-btn-group text-end">
-                        <button class="btn-9 text-white">Apply Now For Scholarship</button>
+                        <button class="btn-9 text-white px-3 py-2 fs-6">Apply Now For Scholarship</button>
                     </div>
                     <style>
                         .hero-inner h1 {
-                            font-size: 34px;
+                            font-size: 32px;
                             font-weight: 700;
                             font-family: "Poppins" !important;
                         }
@@ -1477,13 +1408,13 @@
 
 
                         .btn-9 {
-                            background: #ff7a00;
+                            background: #1d8745;
+                            font-family: "Poppins" !important;
                             color: rgb(0, 0, 0);
-                            font-weight: 700;
-                            border: 1px solid #ff7a00;
+                            font-weight: 600;
+                            border: 1px solid #ffffff;
                             padding: 0.8rem 3rem;
                             cursor: pointer;
-                            text-transform: uppercase;
                             border-radius: 5px;
                             position: relative;
                             overflow: hidden;
@@ -1514,8 +1445,8 @@
                         }
 
                         .btn-9:hover {
-                            color: #ff7a00 !important;
-                            border: 2px solid #ff7a00;
+                            color: #1d8745 !important;
+                            border: 1px solid #1d8745;
 
                         }
                     </style>
@@ -1530,7 +1461,7 @@
     <style>
         .hero-40vh {
             background: #00226B;
-    background: linear-gradient(164deg, rgba(0, 34, 107, 1) 0%, rgba(117, 169, 200, 1) 100%);
+            background: linear-gradient(164deg, rgba(0, 34, 107, 1) 0%, rgba(117, 169, 200, 1) 100%);
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
@@ -1551,7 +1482,7 @@
             content: "";
             position: absolute;
             inset: 0;
-          
+
             /* 🔥 control darkness here */
             z-index: 1;
         }
@@ -1575,13 +1506,13 @@
     <nav class="breadcrumb-wrap container" aria-label="Breadcrumb">
         <a href="#">Home</a>
         <span class="divider" aria-hidden="true">›</span>
-        <a href="#">Placement</a>
+        <a href="#">Scholarships</a>
         <span class="divider" aria-hidden="true">›</span>
-        <span class="current">Inner-Scholarships-Page</span>
+        <span class="current">Inner Scholarships</span>
     </nav>
 
     <style>
-      .breadcrumb-wrap {
+        .breadcrumb-wrap {
             margin-top: 12px !important;
             font-size: 17px;
             font-weight: 400;
@@ -1704,38 +1635,50 @@
                     </form>
 
                 </div>
-                <div class="top-scholarships mt-5">
+                <div class="top-scholarships mt-5 mb-5">
                     <h4 class="fw-bold text-center mb-4">Top Scholarships</h4>
 
                     <div class="scholarship-item">
-                        <div class="badge">NEW</div>
+                        <div class="badge merit">Merit-Based</div>
                         <h6>Merit-Based Scholarship</h6>
-                       
-                        <a href="#" class="apply-link">Apply Now →</a>
                     </div>
 
                     <div class="scholarship-item">
-                        <div class="badge popular">POPULAR</div>
+                        <div class="badge government">Government</div>
                         <h6>Pharmacy Excellence Award</h6>
-                       
-                        <a href="#" class="apply-link">Apply Now →</a>
                     </div>
 
                     <div class="scholarship-item">
-                        <div class="badge limited">LIMITED</div>
+                        <div class="badge sports">Sports Quota</div>
                         <h6>Women in Healthcare Scholarship</h6>
-                       
-                        <a href="#" class="apply-link">Apply Now →</a>
+                    </div>
+
+                    <div class="scholarship-item">
+                        <div class="badge defence">Defence Background</div>
+                        <h6>Merit-Based Scholarship</h6>
+                    </div>
+
+                    <div class="scholarship-item">
+                        <div class="badge minority">Minority</div>
+                        <h6>Pharmacy Excellence Award</h6>
+                    </div>
+
+                    <div class="scholarship-item">
+                        <div class="badge category">Category-Based</div>
+                        <h6>Women in Healthcare Scholarship</h6>
                     </div>
 
                     <a href="#" class="view-all">View All Scholarships</a>
                 </div>
+
+
             </div>
 
             <style>
                 /* Card */
                 .contact-card {
-                    background: #76808f16 !important;
+                    background: #edf4fd !important;
+                    border: 1px solid rgba(0, 98, 255, 0.192);
                     border-radius: 14px;
                     padding: 24px;
                 }
@@ -1814,90 +1757,87 @@
 
             <style>
                 .top-scholarships {
-                    background: #eeeff0;
-                    border-radius: 5px;
-                    padding: 22px;
-                   
+                    background: linear-gradient(180deg, #eef4ff, #ffffff);
+                    border-radius: 14px;
+                    padding: 24px;
+                    border: 1px solid rgba(0, 27, 134, 0.15);
                 }
 
-                .section-title {
-                    font-weight: 700;
-                    margin-bottom: 18px;
-                    font-size: 18px;
-                    color: #111;
-                }
-
-                /* Scholarship Item */
+                /* Card */
                 .scholarship-item {
-                    position: relative;
-                    background: #f5f8ff;
-                    border-radius: 5px;
+                    background: #ffffff;
+                    border-radius: 14px;
                     padding: 16px;
                     margin-bottom: 14px;
-                    transition: all 0.3s ease;
-                }
-                .scholarship-item h6{
-                    font-size: 15px !important;
+                    border: 1px solid #e5ecff;
+                    transition: transform 0.35s ease;
+                    cursor: pointer;
                 }
 
                 .scholarship-item:hover {
                     transform: translateY(-4px);
-                    box-shadow: 0 10px 22px rgba(0, 0, 0, 0.08);
+                    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+                    transition: all 0.3s ease;
                 }
 
-                /* Badge */
+                /* ===== BADGE BASE (ONLY ONCE) ===== */
                 .badge {
-                    position: absolute;
-                    top: 12px;
-                    right: 12px;
-                    background: #2b6cff;
-                    color: #fff;
-                    font-size: 9px;
-                    padding: 4px 8px;
-                    border-radius: 6px;
+                    display: inline-block;
+                    font-size: 11px;
                     font-weight: 600;
-                    clip-path: polygon(90% 0, 100% 49%, 90% 100%, 10% 100%, 0% 50%, 10% 0);
+                    padding: 5px 12px;
+                    border-radius: 20px;
+                    margin-bottom: 8px;
+                    white-space: nowrap;
                 }
 
-                .badge.popular {
-                    background: #ff9800;
+                /* ===== BADGE COLORS (semantic) ===== */
+                .badge.merit {
+                    background: #e6f4ff;
+                    color: #0056b3;
                 }
 
-                .badge.limited {
-                    background: #e53935;
+                .badge.government {
+                    background: #e8f0ff;
+                    color: #003ac1;
                 }
 
-                /* Text */
+                .badge.sports {
+                    background: #e9f8f0;
+                    color: #0a7a3f;
+                }
+
+                .badge.defence {
+                    background: #f3f0ff;
+                    color: #5a3df0;
+                }
+
+                .badge.minority {
+                    background: #fff3e6;
+                    color: #c25600;
+                }
+
+                .badge.category {
+                    background: #ffecec;
+                    color: #e51212;
+                }
+
+                /* Title */
                 .scholarship-item h6 {
-                    font-weight: 700;
-                    margin-bottom: 4px;
                     font-size: 15px;
-                }
-
-                .scholarship-item p {
-                    font-size: 14px;
-                    color: #555;
-                    margin-bottom: 10px;
-                }
-
-                /* Link */
-                .apply-link {
-                    font-size: 14px;
-                    font-weight: 600;
-                    color: #0046d3;
-                    text-decoration: none;
-                }
-
-                .apply-link:hover {
-                    text-decoration: underline;
+                    font-weight: 700;
+                    color: #111;
+                    margin: 0;
+                    line-height: 1.4;
                 }
 
                 /* View all */
                 .view-all {
                     display: block;
                     text-align: center;
-                    margin-top: 16px;
+                    margin-top: 18px;
                     font-weight: 600;
+                    font-size: 14px;
                     color: #003f9e;
                     text-decoration: none;
                 }
@@ -1932,7 +1872,7 @@
                         Bangalore, Karnataka - 560041</p>
                 </div>
 
-                
+
                 <!-- Info -->
                 <div class="col-lg-2 col-md-6 mb-4 pt-5">
                     <h6 class="footer-title">Info</h6>
@@ -1950,7 +1890,7 @@
                         <li><a href="Main-article-page.html">Articles</a></li>
                         <li><a href="Detail-article-page.html">Article Detail</a></li>
                         <li><a href="boards-page.html">Boards</a></li>
-                        
+
                     </ul>
                 </div>
 

@@ -1,574 +1,184 @@
 
-    <section class="boards-section mb-5 mt-4">
-        <div class="section-header">
-            <span class="label">Discover Your Path</span>
-            <h1>Education Boards</h1>
+
+<style>
+
+/* MAIN WRAPPER */
+.error-wrapper {
+    max-width: 1300px;
+    width: 100%;
+    padding: 40px;
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 60px;
+    align-items: center;
+}
+
+/* LEFT CONTENT */
+.error-content h1 {
+    font-size: 40px;
+    color: #1e3a8a;
+    font-weight: 800;
+    margin-bottom: 15px;
+}
+
+.error-content p {
+    font-size: 16px;
+    color: #475569;
+    max-width: 520px;
+    line-height: 1.6;
+    margin-bottom: 35px;
+}
+
+.error-illustration {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.error-illustration span {
+    font-size: 160px;
+    font-weight: 900;
+    color: #1e40af;
+    opacity: 0.1;
+}
+
+.error-illustration .icon {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 50px;
+}
+
+.back-home {
+    display: inline-block;
+    padding: 14px 34px;
+    background: #1e40af;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 8px;
+    transition: 0.3s ease;
+}
+
+.back-home:hover {
+    background: #1d4ed8;
+    transform: translateY(-2px);
+}
+
+/* RIGHT FORM */
+.contact-box {
+    background: #fff;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.08);
+}
+
+.contact-box h2 {
+    font-size: 22px;
+    font-weight: 700;
+    color: #1e293b;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 14px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1.5px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: 14px;
+    background: #f8fafc;
+}
+
+.form-group textarea {
+    resize: none;
+    height: 90px;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #2563eb;
+    background: #fff;
+}
+
+.submit-btn {
+    width: 100%;
+    margin-top: 10px;
+    padding: 13px;
+    background: linear-gradient(135deg, #1e3a8a, #2563eb);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.submit-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 25px rgba(37,99,235,0.35);
+}
+
+/* RESPONSIVE */
+@media (max-width: 992px) {
+    .error-wrapper {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .error-content p {
+        margin: 0 auto 35px;
+    }
+}
+</style>
+
+<section class="error-wrapper">
+
+    <!-- LEFT -->
+    <div class="error-content">
+        <div class="error-illustration">
+            <span>404</span>
+            <div class="icon">🚀</div>
         </div>
 
-        <!-- FILTER TABS -->
-        <div class="filter-wrapper">
-            <div class="board-tabs">
-                <button class="tab active" data-filter="all">
-                    <span class="tab-text">All Boards</span>
-                </button>
-                <button class="tab" data-filter="state">
-                    <span class="tab-text">State</span>
-                </button>
-                <button class="tab" data-filter="national">
-                    <span class="tab-text">National</span>
-                </button>
-                <button class="tab" data-filter="international">
-                    <span class="tab-text">International</span>
-                </button>
-                <div class="tab-indicator"></div>
+        <h1>404: Page not found</h1>
+        <p>
+            You either followed a broken link or entered a page that doesn’t exist.
+            Don’t worry — let’s get you back on track.
+        </p>
+
+        <a href="/" class="back-home">Back to Home</a>
+    </div>
+
+    <!-- RIGHT -->
+    <div class="contact-box">
+        <h2>Contact Us</h2>
+
+        <form action="#" method="post">
+            <div class="form-group">
+                <input type="text" placeholder="Enter Name" required>
             </div>
-        </div>
 
-        <!-- CARDS GRID -->
-        <div class="boards-grid">
-            <article class="board-card" data-category="national">
-                <div class="card-header">
-                    <div class="header-left">
-                        <div class="icon-wrapper">
-                            <img src="https://api.learntechww.com/schoolboard_logo/logo1727940633555.png" alt="CBSE">
-                        </div>
-                        <div class="header-title">
-                            <h3 class="header-board-name">CBSE</h3>
-                            <p class="header-board-fullname">Central Board of Secondary Education</p>
-                        </div>
-                    </div>
-                    <div class="badge">National</div>
-                </div>
+            <div class="form-group">
+                <input type="email" placeholder="Enter Email" required>
+            </div>
 
-                <div class="card-body">
-                    <div class="info-grid">
-                        <div class="info-box">
-                            <div class="info-text">
-                                <span class="info-title">Location :</span>
-                                <span class="info-desc">Shiksha Kendra, 2, Community Centre, Preet Vihar, Delhi - 110092</span>
-                            </div>
-                        </div>
+            <div class="form-group">
+                <input type="tel" placeholder="Enter Phone Number">
+            </div>
 
-                        <div class="info-box">
-                            <div class="info-text">
-                                <span class="info-title">Approvals and Recognition :</span>
-                                <span class="info-desc">Ministry of Education</span>
-                            </div>
-                        </div>
+            <div class="form-group">
+                <textarea placeholder="Enter message" required></textarea>
+            </div>
 
-                        <div class="info-box">
-                            <div class="info-text">
-                                <span class="info-title">Genders Accepted :</span>
-                                <span class="info-desc">Co-Ed</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <button type="submit" class="submit-btn">Submit</button>
+        </form>
+    </div>
 
-                <div class="card-footer">
-                    <a href="#" class="learn-more">
-                        Learn More
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M5 12h14M12 5l7 7-7 7" />
-                        </svg>
-                    </a>
-                </div>
-            </article>
-
-            <article class="board-card" data-category="international">
-                <div class="card-header">
-                    <div class="header-left">
-                        <div class="icon-wrapper">
-                            <img src="https://api.learntechww.com/schoolboard_logo/logo1732783527943.png" alt="IB">
-                        </div>
-                        <div class="header-title">
-                            <h3 class="header-board-name">CAIE</h3>
-                            <p class="header-board-fullname">International Baccalaureate</p>
-                        </div>
-                    </div>
-                    <div class="badge international">International</div>
-                </div>
-
-                <div class="card-body">
-                    <div class="info-grid">
-                        <div class="info-box">
-                            <div class="info-text">
-                                <span class="info-title">Location :</span>
-                                <span class="info-desc">Shiksha Kendra, 2, Community Centre, Preet Vihar, Delhi - 110092</span>
-                            </div>
-                        </div>
-
-                        <div class="info-box">
-                            <div class="info-text">
-                                <span class="info-title">Approvals and Recognition :</span>
-                                <span class="info-desc">Ministry of Education</span>
-                            </div>
-                        </div>
-
-                        <div class="info-box">
-                            <div class="info-text">
-                                <span class="info-title">Genders Accepted :</span>
-                                <span class="info-desc">Co-Ed</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="card-footer">
-                    <a href="#" class="learn-more">
-                        Learn More
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M5 12h14M12 5l7 7-7 7" />
-                        </svg>
-                    </a>
-                </div>
-            </article>
-        </div>
-    </section>
-
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-        }
-
-        .boards-section {
-            background-color: #f0f6ff;
-            max-width: 1600px;
-            margin: 0 auto;
-            padding: 60px;
-        }
-
-        /* Header */
-        .section-header {
-            text-align: center;
-            margin-bottom: 50px;
-        }
-
-        .label {
-            display: inline-block;
-            font-size: 13px;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            color: #003479;
-            margin-bottom: 12px;
-            opacity: 0;
-            animation: fadeIn 0.6s ease forwards;
-        }
-
-        .section-header h1 {
-            font-size: 40px;
-            font-weight: 700;
-            color: #1a1a2e;
-            letter-spacing: -1px;
-            opacity: 0;
-            animation: fadeIn 0.6s ease forwards 0.2s;
-        }
-
-        @keyframes fadeIn {
-            to {
-                opacity: 1;
-            }
-        }
-
-        /* Filter Wrapper */
-        .filter-wrapper {
-            display: flex;
-            justify-content: center;
-            margin-bottom: 60px;
-        }
-
-        .board-tabs {
-            display: inline-flex;
-            background: white;
-            padding: 6px;
-            border-radius: 50px;
-            box-shadow: 0 4px 20px rgba(0, 52, 121, 0.08);
-            position: relative;
-            gap: 4px;
-        }
-
-        .tab {
-            padding: 12px 28px;
-            border: none;
-            background: transparent;
-            color: #64748b;
-            font-size: 15px;
-            font-weight: 500;
-            cursor: pointer;
-            border-radius: 50px;
-            transition: all 0.3s ease;
-            position: relative;
-            z-index: 2;
-        }
-
-        .tab.active {
-            color: white;
-        }
-
-        .tab:hover:not(.active) {
-            color: #003479;
-        }
-
-        .tab-indicator {
-            position: absolute;
-            background: #003479;
-            border-radius: 50px;
-            transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
-            z-index: 1;
-            height: calc(100% - 12px);
-            top: 6px;
-        }
-
-        /* Grid */
-        .boards-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(480px, 1fr));
-            gap: 40px;
-        }
-
-        /* Card */
-        .board-card {
-            background: white;
-            border-radius: 24px;
-            overflow: hidden;
-            box-shadow: 0 10px 40px rgba(0, 52, 121, 0.08);
-            transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
-            opacity: 0;
-            transform: translateY(30px);
-            animation: cardAppear 0.6s ease forwards;
-        }
-
-        .board-card:nth-child(2) {
-            animation-delay: 0.2s;
-        }
-
-        @keyframes cardAppear {
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .board-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 20px 60px rgba(0, 52, 121, 0.15);
-        }
-
-        /* Card Header */
-        .card-header {
-            background: linear-gradient(164deg, rgba(0, 34, 107, 1) 0%, rgba(117, 169, 200, 1) 100%);
-            padding: 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .card-header::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            right: -20%;
-            width: 300px;
-            height: 300px;
-            background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
-            border-radius: 50%;
-        }
-
-        .header-left {
-            display: flex;
-            align-items: center;
-            gap: 16px;
-            position: relative;
-            z-index: 2;
-        }
-
-        .icon-wrapper {
-            width: 80px;
-            height: 80px;
-            background: white;
-            border-radius: 16px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
-            transition: transform 0.4s ease;
-            flex-shrink: 0;
-        }
-
-        .board-card:hover .icon-wrapper {
-            transform: scale(1.1);
-        }
-
-        .icon-wrapper img {
-            width: 50px;
-            height: 50px;
-            object-fit: contain;
-        }
-
-        .header-title {
-            display: flex;
-            flex-direction: column;
-            gap: 4px;
-        }
-
-        .header-board-name {
-            font-size: 32px;
-            font-weight: 700;
-            color: white;
-            letter-spacing: -0.5px;
-            line-height: 1;
-        }
-
-        .header-board-fullname {
-            font-size: 14px;
-            color: rgba(255, 255, 255, 0.9);
-            font-weight: 500;
-        }
-
-        .badge {
-            padding: 8px 16px;
-            background: rgb(255, 255, 255);
-            backdrop-filter: blur(10px);
-            color: rgb(0, 0, 0);
-            font-size: 13px;
-            font-weight: 600;
-            border-radius: 20px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            position: relative;
-            z-index: 2;
-            flex-shrink: 0;
-        }
-
-        .badge.international {
-            background: rgb(255, 255, 255);
-        }
-
-        /* Card Body */
-        .card-body {
-            padding: 20px 20px;
-        }
-
-        /* Info Grid */
-        .info-grid {
-            display: flex;
-            flex-direction: column;
-            gap: 12px;
-        }
-
-        .info-box {
-            display: flex;
-            gap: 4px;
-            padding: 0px;
-            background: #ffffff;
-            border-radius: 12px;
-            transition: all 0.3s ease;
-        }
-
-        .info-text {
-            display: flex;
-            flex-direction: column;
-            gap: 4px;
-        }
-
-        .info-title {
-            font-size: 12px;
-            font-weight: 600;
-            color: #506c94;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-
-        .info-desc {
-            font-size: 15px;
-            font-weight: 500;
-            color: #000000;
-        }
-
-        /* Card Footer */
-        .card-footer {
-            padding: 0 20px 20px;
-        }
-
-        .learn-more {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            color: #003479;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 15px;
-            position: relative;
-            padding-bottom: 4px;
-        }
-
-        .learn-more::after {
-            content: "";
-            position: absolute;
-            left: 0;
-            bottom: 0;
-            width: 100%;
-            height: 2px;
-            background: #003479;
-            transform: scaleX(1);
-            transform-origin: center;
-            transition: transform 0.3s ease;
-        }
-
-        .learn-more:hover::after {
-            transform: scaleX(1.2);
-        }
-
-        .learn-more svg {
-            transition: transform 0.3s ease;
-        }
-
-        .learn-more:hover svg {
-            transform: translateX(6px);
-        }
-
-        /* Responsive */
-        @media (max-width: 1100px) {
-            .boards-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .boards-section {
-                padding: 40px 20px;
-            }
-
-            .section-header h1 {
-                font-size: 32px;
-            }
-
-            .board-tabs {
-                flex-wrap: wrap;
-                border-radius: 16px;
-            }
-
-            .tab {
-                padding: 10px 20px;
-                font-size: 14px;
-            }
-
-            .card-header {
-                padding: 20px;
-                flex-direction: column;
-                align-items: flex-start;
-                gap: 12px;
-            }
-
-            .header-left {
-                width: 100%;
-            }
-
-            .icon-wrapper {
-                width: 60px;
-                height: 60px;
-            }
-
-            .icon-wrapper img {
-                width: 40px;
-                height: 40px;
-            }
-
-            .header-board-name {
-                font-size: 24px;
-            }
-
-            .header-board-fullname {
-                font-size: 13px;
-            }
-
-            .badge {
-                align-self: flex-start;
-            }
-
-            .card-body {
-                padding: 20px;
-            }
-
-            .card-footer {
-                padding: 0 20px 20px;
-            }
-        }
-    </style>
-
-    <script>
-        // Dynamic tab indicator
-        const tabs = document.querySelectorAll('.tab');
-        const indicator = document.querySelector('.tab-indicator');
-        const cards = document.querySelectorAll('.board-card');
-
-        function updateIndicator(tab) {
-            const tabRect = tab.getBoundingClientRect();
-            const containerRect = tab.parentElement.getBoundingClientRect();
-
-            indicator.style.width = `${tabRect.width}px`;
-            indicator.style.left = `${tabRect.left - containerRect.left}px`;
-        }
-
-        // Initialize indicator position
-        const activeTab = document.querySelector('.tab.active');
-        if (activeTab) {
-            updateIndicator(activeTab);
-        }
-
-        tabs.forEach(tab => {
-            tab.addEventListener('click', () => {
-                // Update active state
-                tabs.forEach(t => t.classList.remove('active'));
-                tab.classList.add('active');
-
-                // Update indicator
-                updateIndicator(tab);
-
-                // Filter cards
-                const filter = tab.getAttribute('data-filter');
-
-                cards.forEach((card, index) => {
-                    const category = card.getAttribute('data-category');
-
-                    if (filter === 'all' || category === filter) {
-                        card.style.display = 'block';
-                        card.style.animation = 'none';
-                        setTimeout(() => {
-                            card.style.animation = `cardAppear 0.6s ease ${index * 0.1}s forwards`;
-                        }, 10);
-                    } else {
-                        card.style.opacity = '0';
-                        card.style.transform = 'translateY(20px)';
-                        setTimeout(() => {
-                            card.style.display = 'none';
-                        }, 400);
-                    }
-                });
-            });
-        });
-
-        // Update indicator on window resize
-        window.addEventListener('resize', () => {
-            const activeTab = document.querySelector('.tab.active');
-            if (activeTab) {
-                updateIndicator(activeTab);
-            }
-        });
-
-        // Prevent default link behavior
-        document.querySelectorAll('.learn-more').forEach(link => {
-            link.addEventListener('click', (e) => {
-                e.preventDefault();
-            });
-        });
-    </script>
+</section>

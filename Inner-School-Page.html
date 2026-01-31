@@ -1372,32 +1372,30 @@
 
                 <!-- CONTENT -->
                 <div class="col-lg-10 col-md-9 text-white">
-                    <h1 class="mb-3">
+                    <h1 class="mb-4">
                         New Horizon International School (NHIS)
                     </h1>
 
-                    <p class="mb-3">
-                        <i class="fa-solid fa-location-dot" style="color: #ff5900; font-size: 18px;"></i> Sy No. 38,
-                        Byrathi Village, Hennur Main Road, Kothanur, Bengaluru, Karnataka - 560077
+                    <p class="info-row">
+                        <i class="fa-solid fa-location-dot location" style="color: red;"></i>
+                        <span>&nbsp;&nbsp;Sy No. 38, Byrathi Village, Hennur Main Road, Kothanur, Bengaluru, Karnataka -
+                            560077</span>
                     </p>
 
-                    <p>
-                        <i class="fa-solid fa-award" style="color: #FFD43B;"></i> <strong>Board:</strong>
-                        CBSE, CAIE
+                    <p class="info-row">
+                        <i class="fa-solid fa-graduation-cap board" style="color: #001a4d;"></i>
+                        <span><strong>&nbsp;&nbsp;&nbsp;Board :</strong> CBSE, CAIE</span>
                     </p>
 
-                    <p>
-                        <i class="fa-solid fa-award" style="color: #FFD43B;"></i> <strong>
-                            School Level:</strong>
-                        Pre-Primary, Primary, Higher Secondary
+                    <p class="info-row">
+                        <i class="fa-solid fa-award level" style="color: yellow;"></i>
+                        <span><strong>&nbsp;&nbsp;&nbsp;School Level :</strong> Pre-Primary, Primary, Higher Secondary</span>
                     </p>
+
 
                     <!-- <span class="edu-badge private-badge mx-4">Private</span> -->
 
                     <div class="cta-btn-group">
-                        <button class="cta-btn cta-download">
-                            <i class="fa-solid fa-download"></i> Download Brochure
-                        </button>
                         <button class="cta-btn cta-fee">
                             <i class="fa-solid fa-indian-rupee-sign"></i> Get Fee Structure
                         </button>
@@ -1529,8 +1527,9 @@
             display: flex;
             gap: 16px;
             flex-wrap: wrap;
-            justify-content: flex-end;
+            justify-content: end;
             /* ✅ RIGHT SIDE */
+            margin-right: 100px;
         }
 
 
@@ -1829,14 +1828,11 @@
     <!-- City Filter Buttons -->
     <div class="city-filters mt-4 text-start container">
         <button class="filter-btn active" data-city="all">Info</button>
-        <button class="filter-btn" data-city="Thiruvananthapuram">Courses & Fee</button>
-        <button class="filter-btn" data-city="Kochi">Admissions</button>
-        <button class="filter-btn" data-city="Calicut">Placement </button>
-        <button class="filter-btn" data-city="Kollam">Ranking</button>
-        <button class="filter-btn" data-city="Kochi">Scholarship </button>
-        <button class="filter-btn" data-city="Calicut">Infrastructure </button>
-        <button class="filter-btn" data-city="Kollam">Review </button>
+        <button class="filter-btn" data-city="Thiruvananthapuram">Admission Process</button>
+        <button class="filter-btn" data-city="Kochi">Extracurriculars</button>
+        <button class="filter-btn" data-city="Calicut">Gallery</button>
         <button class="filter-btn" data-city="Kollam">FAQ</button>
+        <button class="filter-btn" data-city="Kollam">Review </button>
     </div>
 
     <style>
@@ -1916,7 +1912,7 @@
             <div class="col-lg-4 position-relative">
                 <!-- Apply Now Image -->
                 <div class="image-card position-relative overflow-hidden mb-4">
-                    <img src="8609213_5853.jpg" alt="Course Image" class="img-fluid rounded-2">
+                    <img src="home-background/2151966306.jpg" alt="Course Image" class="img-fluid rounded-2">
                     <button class="apply-btn position-absolute translate-middle-y">
                         Apply Now
                     </button>
@@ -2192,7 +2188,7 @@
     </script>
 
 
-    <section class="school-hero-v2">
+    <section class="school-hero-v2 mt-5">
         <div class="school-hero-overlay"></div>
 
         <div class="school-hero-inner">
@@ -2215,16 +2211,19 @@
             align-items: center;
             justify-content: center;
             text-align: center;
-            background: url("8609213_5853.jpg") center / cover no-repeat;
+            background: url("https://api.learntechww.com/school_banner_image/logo1727422098688.webp") center / cover no-repeat;
             padding: 40px 20px;
+            margin-inline: 140px;
+            border-radius: 20px;
         }
 
         /* Overlay */
         .school-hero-overlay {
             position: absolute;
             inset: 0;
-            background: rgba(0, 0, 0, 0.55);
+            background: rgba(0, 0, 0, 0.475);
             z-index: 1;
+            border-radius: 20px;
         }
 
         /* Content wrapper */
@@ -2326,6 +2325,7 @@
         }
 
         .locate-title {
+
             text-align: center;
             font-weight: 800;
             color: #00113a;
@@ -2511,7 +2511,7 @@
     </style>
 
     <main class="locate-wrap" aria-labelledby="locate-title">
-        <h4 id="locate-title" class="locate-title">Locate the College</h4>
+        <h4 id="locate-title" class="locate-title fs-3">Locate the School</h4>
         <p class="locate-lede">A kinetic split with magnetic actions, grain, and scroll-revealed hierarchy for a
             premium,
             editorial feel.</p>
@@ -2570,229 +2570,230 @@
 
 
 
-<style>
-/* ================= WRAPPER ================= */
-.college-slider-wrap {
-    max-width: 1600px;
-    margin: auto;
-    display: flex;
-    align-items: center;
-    gap: 18px;
-    padding: 0 37px;
-}
+    <style>
+        /* ================= WRAPPER ================= */
+        .college-slider-wrap {
+            max-width: 1600px;
+            margin: auto;
+            display: flex;
+            align-items: center;
+            gap: 18px;
+            padding: 0 37px;
+        }
 
-/* ================= NAV BUTTONS ================= */
-.college-slider-btn {
-    width: 46px;
-    height: 46px;
-    border-radius: 50%;
-    border: none;
-    background: #ffffff;
-    font-size: 18px;
-    cursor: pointer;
-    flex-shrink: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
+        /* ================= NAV BUTTONS ================= */
+        .college-slider-btn {
+            width: 46px;
+            height: 46px;
+            border-radius: 50%;
+            border: none;
+            background: #ffffff;
+            font-size: 18px;
+            cursor: pointer;
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
 
-/* ================= CAROUSEL ================= */
-.college-slider-track {
-    display: flex;
-    gap: 10px;              /* ✅ space between cards */
-    overflow-x: auto;
-    scroll-behavior: smooth;
-    padding: 10px 4px;
-    flex: 1;
-}
+        /* ================= CAROUSEL ================= */
+        .college-slider-track {
+            display: flex;
+            gap: 10px;
+            /* ✅ space between cards */
+            overflow-x: auto;
+            scroll-behavior: smooth;
+            padding: 10px 4px;
+            flex: 1;
+        }
 
-.college-slider-track::-webkit-scrollbar {
-    display: none;
-}
+        .college-slider-track::-webkit-scrollbar {
+            display: none;
+        }
 
-/* ================= CARD ================= */
-.college-slider-card {
-    width: 320px;
-    min-width: 320px;
-    flex-shrink: 0;
-    margin: 0;
-    background: #fff;
-    border-radius: 14px;
-    overflow: hidden;
-    border: 1px solid #dcdcdc;
-    transition: 0.3s ease;
-}
+        /* ================= CARD ================= */
+        .college-slider-card {
+            width: 320px;
+            min-width: 320px;
+            flex-shrink: 0;
+            margin: 0;
+            background: #fff;
+            border-radius: 14px;
+            overflow: hidden;
+            border: 1px solid #dcdcdc;
+            transition: 0.3s ease;
+        }
 
-.college-slider-card a {
-    text-decoration: none;
-    color: inherit;
-}
+        .college-slider-card a {
+            text-decoration: none;
+            color: inherit;
+        }
 
-/* IMAGE */
-.college-card-image {
-    height: 200px;
-    background-size: cover;
-    background-position: center;
-}
+        /* IMAGE */
+        .college-card-image {
+            height: 200px;
+            background-size: cover;
+            background-position: center;
+        }
 
-/* CONTENT */
-.college-card-body {
-    padding: 18px 18px 15px;
-}
+        /* CONTENT */
+        .college-card-body {
+            padding: 18px 18px 15px;
+        }
 
-.college-card-body h5 {
-    font-size: 20px;
-    font-weight: 400;
-    margin-bottom: 6px;
-}
+        .college-card-body h5 {
+            font-size: 20px;
+            font-weight: 400;
+            margin-bottom: 6px;
+        }
 
-.college-card-location {
-    font-size: 16px;
-    color: #777;
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    margin-bottom: 16px;
-}
+        .college-card-location {
+            font-size: 16px;
+            color: #777;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            margin-bottom: 16px;
+        }
 
-/* BUTTON ROW */
-.college-card-actions {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
+        /* BUTTON ROW */
+        .college-card-actions {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
 
-/* BUTTONS */
-.btn-college-apply {
-    padding: 8px 14px;
-    background: #0b2a66;
-    color: #fff;
-    border: none;
-    border-radius: 6px;
-    font-size: 14px;
-    font-weight: 700;
-    cursor: pointer;
-}
+        /* BUTTONS */
+        .btn-college-apply {
+            padding: 8px 14px;
+            background: #0b2a66;
+            color: #fff;
+            border: none;
+            border-radius: 6px;
+            font-size: 14px;
+            font-weight: 700;
+            cursor: pointer;
+        }
 
-.btn-college-view {
-    padding: 8px 14px;
-    background: transparent;
-    border: 1px solid #0b2a66;
-    color: #0b2a66;
-    border-radius: 6px;
-    font-size: 14px;
-    cursor: pointer;
-}
+        .btn-college-view {
+            padding: 8px 14px;
+            background: transparent;
+            border: 1px solid #0b2a66;
+            color: #0b2a66;
+            border-radius: 6px;
+            font-size: 14px;
+            cursor: pointer;
+        }
 
-/* RESPONSIVE */
-@media (max-width: 768px) {
-    .college-slider-wrap {
-        padding: 0 20px;
-    }
-}
-</style>
-<section class="my-4">
-    <h2 class="mb-4 text-center">
-        Start Your Future with
-        <span style="color:#75a9c8;">Kerala’s Top Colleges</span>
-    </h2>
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .college-slider-wrap {
+                padding: 0 20px;
+            }
+        }
+    </style>
+    <section class="my-4">
+        <h2 class="mb-4 text-center text-primary-emphasis">
+            Start Your Future with
+            <span style="color:#75a9c8;">Kerala’s Top Schools</span>
+        </h2>
 
-    <div class="college-slider-wrap">
+        <div class="college-slider-wrap">
 
-        <!-- PREV -->
-        <button class="college-slider-btn slider-prev">
-            <i class="fa-solid fa-chevron-left"></i>
-        </button>
+            <!-- PREV -->
+            <button class="college-slider-btn slider-prev">
+                <i class="fa-solid fa-chevron-left"></i>
+            </button>
 
-        <!-- TRACK -->
-        <div class="college-slider-track">
+            <!-- TRACK -->
+            <div class="college-slider-track">
 
-            <div class="college-slider-card">
-                <a href="#">
-                    <div class="college-card-image"
-                        style="background-image:url('https://api.learntechww.com/college_banner_image/logo1747817850961.webp')">
-                    </div>
-                    <div class="college-card-body">
-                        <h5>St. Thomas College</h5>
-                        <p class="college-card-location">
-                            <i class="fa-solid fa-location-dot" style="color:#ff4d00"></i>
-                            40 Feet Rd, Fayazabad
-                        </p>
-                        <div class="college-card-actions">
-                            <button class="btn-college-apply">Apply Now</button>
-                            <button class="btn-college-view">View More</button>
+                <div class="college-slider-card">
+                    <a href="#">
+                        <div class="college-card-image"
+                            style="background-image:url('https://api.learntechww.com/college_banner_image/logo1747817850961.webp')">
                         </div>
-                    </div>
-                </a>
+                        <div class="college-card-body">
+                            <h5>St. Thomas College</h5>
+                            <p class="college-card-location">
+                                <i class="fa-solid fa-location-dot" style="color:#ff4d00"></i>
+                                40 Feet Rd, Fayazabad
+                            </p>
+                            <div class="college-card-actions">
+                                <button class="btn-college-apply">Apply Now</button>
+                                <button class="btn-college-view">View More</button>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- repeat cards -->
+                <div class="college-slider-card">
+                    <a href="#">
+                        <div class="college-card-image"
+                            style="background-image:url('https://api.learntechww.com/college_banner_image/logo1747820987012.webp')">
+                        </div>
+                        <div class="college-card-body">
+                            <h5>St. Thomas College</h5>
+                            <p class="college-card-location">
+                                <i class="fa-solid fa-location-dot" style="color:#ff4d00"></i>
+                                40 Feet Rd, Fayazabad
+                            </p>
+                            <div class="college-card-actions">
+                                <button class="btn-college-apply">Apply Now</button>
+                                <button class="btn-college-view">View More</button>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="college-slider-card">
+                    <a href="#">
+                        <div class="college-card-image"
+                            style="background-image:url('https://api.learntechww.com/college_banner_image/logo1747820987012.webp')">
+                        </div>
+                        <div class="college-card-body">
+                            <h5>St. Thomas College</h5>
+                            <p class="college-card-location">
+                                <i class="fa-solid fa-location-dot" style="color:#ff4d00"></i>
+                                40 Feet Rd, Fayazabad
+                            </p>
+                            <div class="college-card-actions">
+                                <button class="btn-college-apply">Apply Now</button>
+                                <button class="btn-college-view">View More</button>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="college-slider-card">
+                    <a href="#">
+                        <div class="college-card-image"
+                            style="background-image:url('https://api.learntechww.com/college_banner_image/logo1747820987012.webp')">
+                        </div>
+                        <div class="college-card-body">
+                            <h5>St. Thomas College</h5>
+                            <p class="college-card-location">
+                                <i class="fa-solid fa-location-dot" style="color:#ff4d00"></i>
+                                40 Feet Rd, Fayazabad
+                            </p>
+                            <div class="college-card-actions">
+                                <button class="btn-college-apply">Apply Now</button>
+                                <button class="btn-college-view">View More</button>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
             </div>
 
-            <!-- repeat cards -->
-            <div class="college-slider-card">
-                <a href="#">
-                    <div class="college-card-image"
-                        style="background-image:url('https://api.learntechww.com/college_banner_image/logo1747820987012.webp')">
-                    </div>
-                    <div class="college-card-body">
-                        <h5>St. Thomas College</h5>
-                        <p class="college-card-location">
-                            <i class="fa-solid fa-location-dot" style="color:#ff4d00"></i>
-                            40 Feet Rd, Fayazabad
-                        </p>
-                        <div class="college-card-actions">
-                            <button class="btn-college-apply">Apply Now</button>
-                            <button class="btn-college-view">View More</button>
-                        </div>
-                    </div>
-                </a>
-            </div>
-
-            <div class="college-slider-card">
-                <a href="#">
-                    <div class="college-card-image"
-                        style="background-image:url('https://api.learntechww.com/college_banner_image/logo1747820987012.webp')">
-                    </div>
-                    <div class="college-card-body">
-                        <h5>St. Thomas College</h5>
-                        <p class="college-card-location">
-                            <i class="fa-solid fa-location-dot" style="color:#ff4d00"></i>
-                            40 Feet Rd, Fayazabad
-                        </p>
-                        <div class="college-card-actions">
-                            <button class="btn-college-apply">Apply Now</button>
-                            <button class="btn-college-view">View More</button>
-                        </div>
-                    </div>
-                </a>
-            </div>
-
-            <div class="college-slider-card">
-                <a href="#">
-                    <div class="college-card-image"
-                        style="background-image:url('https://api.learntechww.com/college_banner_image/logo1747820987012.webp')">
-                    </div>
-                    <div class="college-card-body">
-                        <h5>St. Thomas College</h5>
-                        <p class="college-card-location">
-                            <i class="fa-solid fa-location-dot" style="color:#ff4d00"></i>
-                            40 Feet Rd, Fayazabad
-                        </p>
-                        <div class="college-card-actions">
-                            <button class="btn-college-apply">Apply Now</button>
-                            <button class="btn-college-view">View More</button>
-                        </div>
-                    </div>
-                </a>
-            </div>
+            <!-- NEXT -->
+            <button class="college-slider-btn slider-next">
+                <i class="fa-solid fa-chevron-right"></i>
+            </button>
 
         </div>
-
-        <!-- NEXT -->
-        <button class="college-slider-btn slider-next">
-            <i class="fa-solid fa-chevron-right"></i>
-        </button>
-
-    </div>
-</section>
+    </section>
 
 
 
@@ -2806,7 +2807,7 @@
             <h2 class="lt-heading">Personalised Admission Support</h2>
             <h3>Kerala’s Trusted Education Experts</h3>
             <p class="lt-subtext">
-                Discover top colleges, explore courses, and get step-by-step guidance for secure admissions in Kerala.
+                Discover top Schools, explore courses, and get step-by-step guidance for secure admissions in Kerala.
             </p>
 
             <form class="lt-form">
@@ -2827,13 +2828,7 @@
 
                 <input type="email" class="lt-input" placeholder="Enter Email" name="email" required>
 
-                <select class="lt-input" name="stream" required>
-                    <option value="" disabled selected>Select Stream</option>
-                    <option value="Science">Science</option>
-                    <option value="Commerce">Commerce</option>
-                    <option value="Arts">Arts</option>
-                    <option value="Other">Other</option>
-                </select>
+                <input type="email" class="lt-input" placeholder="Interested Class?" name="email" required>
 
                 <button type="submit" class="btn-blue">Request for a Call Back</button>
             </form>

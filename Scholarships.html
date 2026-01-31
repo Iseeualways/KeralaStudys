@@ -31,14 +31,57 @@
 
 </head>
 <style>
-      .btn-8 {
-        background: #003a73;
+    .btn-5 {
+        background: #1d8745;
+        border-radius: 5px;
         color: #ffffff;
-        font-weight: 700;
-        border: 2px solid #ffffff;
+        font-weight: 600;
+        border: 2px solid #ffffff !important;
         padding: 0.8rem 3rem;
         cursor: pointer;
-        text-transform: uppercase;
+        position: relative;
+        overflow: hidden;
+        isolation: isolate;
+        transition: color .25s ease, transform .25s ease, box-shadow .25s ease;
+    }
+
+    /* WHITE REVEAL LAYER */
+    .btn-5::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: white;
+
+        --progress: 100%;
+        clip-path: polygon(0 calc(var(--progress) / 2),
+                100% calc(var(--progress) / 2),
+                100% calc(100% - var(--progress) / 2),
+                0 calc(100% - var(--progress) / 2));
+
+        transition: clip-path .25s ease;
+        z-index: -1;
+    }
+
+    /* HOVER */
+    .btn-5:hover::before {
+        --progress: 0%;
+    }
+
+    .btn-5:hover {
+        color: #1d8745;
+        border: 2px solid #1d8745;
+        box-shadow: 0 12px 30px rgba(0, 0, 0, .25);
+    }
+
+
+    .btn-8 {
+        background: #003a73;
+        border-radius: 5px;
+        color: #ffffff;
+        font-weight: 700;
+        border: 2px solid #ffffff !important;
+        padding: 0.8rem 3rem;
+        cursor: pointer;
         position: relative;
         overflow: hidden;
         isolation: isolate;
@@ -72,8 +115,9 @@
         border: 2px solid #003a73;
         box-shadow: 0 12px 30px rgba(0, 0, 0, .25);
     }
+
     h1 {
-        font-weight: 400 !important;
+        font-weight: 600 !important;
     }
 
 
@@ -156,7 +200,6 @@
     li {
         font-size: 16px;
     }
-
 </style>
 
 <body>
@@ -165,8 +208,8 @@
         <div class="logo"><img src="https://www.keralastudy.com/images/logo.png" class="w-100" alt=""></div>
         <div class="nav-links">
             <div class="nav-item">Top Colleges</div>
-      
-                <div class="nav-item">Top Courses</div>
+
+            <div class="nav-item">Top Courses</div>
 
             <div class="nav-item">Entrance Exam</div>
             <div class="nav-item">Boards</div>
@@ -550,109 +593,80 @@
 
     <!-- ====================================================================================banner -->
 
-    <!-- HERO -->
-    <section class="hero">
-        <div class="container text-end">
-            <div class="row">
-                <div class="col-lg-12 reveal text-end">
-                    <h1 style="color: #ffffff; font-weight: 400 !important;">
-                        <span style="color: #003264;">S</span>cholarships<span style="color: #fcfcfc;"></span>
-                    </h1>
-                    <p class="mt-4 text-end ms-auto" style="color: #ffffff;">
-                        We partner with students, parents, and institutions to deliver
-                        transparent education pathways that lead to real careers
-                        not just admissions.
-                    </p>
+
+    <section class="hero-sec mb-0">
+        <div class="hero-container text-center">
+
+            <!-- LEFT SIDE -->
+            <div class="hero-left">
+                <h1 class="text-white mb-3">Explore Scholarships to Support Your Studies</h1>
+
+
+                <form action="#" class="search-bar">
+                    <input type="text" placeholder="Search for Scholarships" class="search-input">
+                    <button type="submit" class="search-btn">
+                        <img src="search_38dp_000000_FILL0_wght400_GRAD0_opsz40.svg" alt="search">
+                    </button>
+                </form>
+
+                <div class="text-center mt-4">
+                    <button class="btn-5 px-3 py-2">Get 1 Lakh Scholarship</button>
                 </div>
+
+                <style>
+                    input {
+                        margin: 0 !important;
+                    }
+
+                    .search-bar {
+                        position: relative;
+                        display: inline-flex;
+                        align-items: center;
+                        background: #fff;
+                        border-radius: 12px;
+                        padding: 3px 5px;
+                        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+                    }
+
+                    .search-input {
+                        border: none;
+                        outline: none;
+                        padding: 8px 10px;
+                        font-size: 0.95rem;
+                        width: 400px;
+                    }
+
+                    .search-btn {
+                        background: #002e62;
+                        border: none;
+                        border-radius: 10px;
+                        padding: 7px 10px;
+                        cursor: pointer;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        transition: 0.2s ease;
+                    }
+
+                    .search-btn img {
+                        width: 20px;
+                        height: 20px;
+                        filter: brightness(0) invert(1);
+                    }
+
+                    .hero-inner h1 {
+                        font-weight: 700;
+                    }
+
+                    .search-btn:hover {
+                        background: #005ecc;
+                    }
+                </style>
+
             </div>
-            <div class="text-start">
-                <button class="btn-9 text-white">Get ₹1 Lakh Scholarship</button>
-            </div>
+
         </div>
     </section>
-    <style>
-        .btn-9 {
-            background: #ff7a00;
-            color: rgb(0, 0, 0);
-            font-weight: 500;
-            border: 2px solid #ffffff;
-            padding: 0.8rem 2rem;
-            cursor: pointer;
-            text-transform: uppercase;
-           border-radius: 5px;
-            position: relative;
-            overflow: hidden;
-            isolation: isolate;
-            transition: color .25s ease, transform .25s ease, box-shadow .25s ease;
-        }
-
-        /* WHITE REVEAL LAYER */
-        .btn-9::before {
-            content: "";
-            position: absolute;
-            inset: 0;
-            background: white;
-            
-            --progress: 100%;
-            clip-path: polygon(0 calc(var(--progress) / 2),
-                    100% calc(var(--progress) / 2),
-                    100% calc(100% - var(--progress) / 2),
-                    0 calc(100% - var(--progress) / 2));
-
-            transition: clip-path .25s ease;
-            z-index: -1;
-        }
-
-        /* HOVER */
-        .btn-9:hover::before {
-            --progress: 0%;
-        }
-
-        .btn-9:hover {
-           color: #ff7a00 !important;
-            border: 2px solid #ff7a00;
-            box-shadow: 0 12px 30px rgba(0, 0, 0, .25);
-        }
-
-
-        .hero {
-            position: relative;
-            padding: 80px 0;
-            background: url("delivery-tracking-system-ecommerce-modish-online-business.jpg") center center / cover no-repeat;
-            overflow: hidden;
-        }
-
-        /* BLACK OVERLAY */
-        .hero::before {
-            content: "";
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(90deg, #ffffff75, #164271dc);
-            z-index: 1;
-        }
-
-        /* CONTENT ABOVE OVERLAY */
-        .hero .container {
-            position: relative;
-            z-index: 10;
-        }
-
-        .hero h1 {
-            font-size: clamp(3.2rem, 6vw, 5.4rem);
-            font-weight: 700;
-            letter-spacing: -0.03em;
-            color: #ffffff;
-        }
-
-        .hero p {
-            max-width: 560px;
-            font-size: 1.1rem;
-            color: rgba(255, 255, 255, 0.85);
-
-            /* keeps paragraph right-aligned block */
-        }
-    </style>
-
     <!-- BREADCRUMB -->
     <nav class="breadcrumb-wrap container" aria-label="Breadcrumb">
         <a href="#">Home</a>
@@ -707,40 +721,90 @@
 
 
 
-    <section class=" scholar-top mt-5 mb-2">
+
+    <style>
+        .hero-sec {
+            background: #00226B;
+            background: linear-gradient(164deg, rgba(0, 34, 107, 1) 0%, rgba(117, 169, 200, 1) 100%);
+            background-size: cover !important;
+            background-repeat: no-repeat !important;
+            background-position: center !important;
+            padding: 60px 0 100px;
+            position: relative;
+        }
+
+        .hero-container {
+            width: 86%;
+            margin: auto;
+
+            align-items: center;
+
+        }
+    </style>
+
+
+
+    <section class="scholar-top mt-5 mb-2">
         <div class="container">
-            <div class="row align-items-center g-4">
-
-                <!-- Left Image -->
-                <div class="col-lg-6">
-                    <div class="img-wrap">
-                        <img src="Student 2 (1).png" alt="Section Image" class="img-fluid w-100">
-                    </div>
-                </div>
-
+            <div class="row gx-4 ">
 
                 <!-- Right Content -->
-                <div class="col-lg-6">
-                    <h2 style="color: #00226b; font-size: 42px !important;">Scholarships in<span
+                <div class="col-lg-6 d-flex flex-column justify-content-start">
+
+                    <h2 style="color: #00226b; font-size: 36px !important;">Scholarships in<span
                             style="color: #75a9c8;"> Kerala</span></h2>
 
 
-                    <p class="text-muted mb-4">
+                    <p class="text-muted mb-0">
                         India offers a diverse range of scholarships, enabling students from various backgrounds to
                         pursue higher education without financial constraints. These scholarships are designed to
                         support undergraduate and postgraduate students, both within the country and abroad. Whether you
                         are a student aiming to study in India or an international student looking to benefit from
                         Indian educational opportunities, numerous scholarships cater to different needs and
-                        aspirations. The availability of these scholarships ensures that deserving students have access
+                        aspirations.<br> The availability of these scholarships ensures that deserving students have
+                        access
                         to quality education, regardless of their financial situation.
+                        The availability of these scholarships ensures that deserving students have access
+                        The availability of these scholarships ensures that deserving students have access
+                        to quality education, regardless of their financial situation.
+                        The availability of these scholarships ensures that deserving students have access
+                        to quality education, regardless of their financial situation and postgraduate students, both
+                        within the country and abroad. and postgraduate students. within the country and abroad. and postgraduate students.
                     </p>
                 </div>
 
+                <!-- Left Image -->
+                <div class="col-lg-6">
+                    <div class="img-wrap">
+                        <img src="Scholar-img.png" alt="Section Image" class="img-fluid w-100">
+                    </div>
+                </div>
             </div>
+            <h4 class="fw-bold">Benefits of Scholarships:</h4>
+            <p class="text-muted mb-4">
+                India offers a diverse range of scholarships, enabling students from various backgrounds to
+                pursue higher education without financial constraints. These scholarships are designed to
+                support undergraduate and postgraduate students, both within the country and abroad.
+            </p>
+
+
+            <div class="text-center">
+                <button class="btn-8 px-2 py-2 fs-6">View More</button>
+            </div>
+
         </div>
+
     </section>
 
     <style>
+        .scholar-top h4{
+    margin-top: 0 !important;
+}
+
+        .img-wrap img {
+            display: block;
+        }
+
         .img-wrap {
             position: relative;
             overflow: hidden;
@@ -749,220 +813,607 @@
         .img-wrap::after {
             content: "";
             position: absolute;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            height: 45%;
-
-            background: linear-gradient(to top,
-                    rgb(255, 255, 255) 0%,
-                    rgb(255, 255, 255) 40%,
-                    rgba(255, 255, 255, 0) 100%);
-
+            inset: 0;
             pointer-events: none;
 
+            /* Gradient fade */
+            background: linear-gradient(to top,
+                    rgba(255, 255, 255, 1) 0%,
+                    rgba(255, 255, 255, 1) 35%,
+                    rgba(255, 255, 255, 0) 75%);
+
+            /* 🔥 Curved corners fade */
+            -webkit-mask-image: radial-gradient(120% 80% at 50% 120%,
+                    black 40%,
+                    transparent 70%);
+            mask-image: radial-gradient(120% 80% at 50% 120%,
+                    black 40%,
+                    transparent 70%);
         }
     </style>
 
 
 
-    <section class="py-0">
+    <style>
+        /* Filter Bar - Top Row */
+        .filter-bar {
+            background: #ededed;
+            border-radius: 8px;
+            padding: 20px 24px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+            border: 2px solid rgba(0, 52, 114, 0.112);
+        }
+
+        .filter-title {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 16px;
+            color: #1f3c88;
+        }
+
+        .filters-row {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+            gap: 16px;
+            align-items: end;
+        }
+
+        .filter-group {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .filter-group label {
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: .08em;
+            text-transform: uppercase;
+            color: #6b7280;
+        }
+
+        .filter-select {
+            border: none;
+            border-bottom: 2px solid #39496fa4;
+            border-radius: 0;
+            padding: 10px 2px;
+            background: transparent;
+            font-size: 14px;
+        }
+
+        .filter-select:focus {
+            border-bottom-color: #1f3c88;
+            box-shadow: none;
+        }
+
+
+        .phone-input .country-code {
+            min-width: 80px;
+            justify-content: center;
+            font-weight: 600;
+            font-size: 14px;
+            background: #fff;
+            border-right: 0;
+        }
+
+        .phone-input .form-control {
+            border-left: 0;
+        }
+
+        .phone-input .input-group-text,
+        .phone-input .form-control {
+            height: 48px;
+        }
+
+        .interest-card {
+            background: linear-gradient(135deg, #ffffff 0%, #d6e9f9 100%);
+            border: 1px solid rgb(206, 218, 242);
+            border-radius: 16px;
+            padding: 28px 20px;
+            box-shadow: 0 8px 24px rgba(13, 110, 253, 0.08);
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .icon-bubble {
+            border-radius: 50%;
+            margin: 0 auto 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .icon-bubble i {
+            font-size: 42px;
+            color: #0d6efd;
+        }
+
+        /* Read More link */
+        .read-more {
+            font-size: 15px;
+            font-weight: 600;
+            color: #1f3c88;
+            position: relative;
+            padding-right: 18px;
+            transition: color 0.25s ease;
+            text-decoration: none;
+        }
+
+        .read-more::after {
+            content: "→";
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            transition: transform 0.25s ease;
+        }
+
+        .read-more:hover {
+            color: #0d6efd;
+        }
+
+        .read-more:hover::after {
+            transform: translate(4px, -50%);
+        }
+
+        /* Footer buttons wrapper */
+        .scholar-card-footer {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-top: 8px;
+            justify-content: flex-start;
+            /* LEFT */
+        }
+
+
+        /* Buttons modern look */
+        .scholar-card-footer .btn {
+            font-weight: 600;
+            border-radius: 2px;
+            padding: 8px 14px;
+            /* smaller */
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+
+            flex: 0 0 auto;
+            /* STOP stretching */
+            min-width: auto;
+            /* remove forced width */
+            font-size: 14px;
+        }
+
+
+        .btn-9 {
+            background: #1f3c88;
+            border: none;
+        }
+
+        .btn-9:hover {
+            background: #163063;
+        }
+
+        /* Primary button */
+        .scholar-card-footer .btn-primary {
+            box-shadow: 0 8px 20px rgba(13, 110, 253, 0.25);
+        }
+
+        .scholar-card-footer .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 14px 30px rgba(13, 110, 253, 0.35);
+        }
+
+        /* Outline button */
+        .scholar-card-footer .btn-outline-dark {
+            background-color: white !important;
+        }
+
+        .scholar-card-footer .btn-outline-dark:hover {
+            background-color: rgb(0, 0, 0) !important;
+            color: white !important;
+        }
+
+        .scholar-card {
+            background: #ffffff;
+            border: 1px solid #56000000;
+            border-radius: 20px;
+            padding: 20px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.096);
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+
+            transition:
+                border-color 0.35s ease,
+                box-shadow 0.35s ease,
+                transform 0.35s ease;
+        }
+
+        .scholar-card:hover {
+            border-color: #1f3d8844;
+            box-shadow: 0 20px 45px rgba(31, 61, 136, 0.18);
+        }
+
+
+        /* Logo */
+        .scholar-logo {
+            width: 60px;
+            height: 60px;
+            border-radius: 12px;
+            background: #fff;
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+            flex-shrink: 0;
+        }
+
+        .scholar-logo img {
+            max-width: 70%;
+        }
+
+        .scholar-title {
+            font-size: 1.20rem;
+            font-weight: 700;
+            color: #00226b;
+            line-height: 1.3;
+        }
+
+        /* List */
+        .scholar-list {
+            padding-left: 18px;
+            margin: 16px 0;
+            flex-grow: 1;
+        }
+
+        .scholar-list li {
+            margin-bottom: 8px;
+            font-size: 16px;
+        }
+
+        /* Contact Card */
+        .contact-card {
+            background-color: #edf4fd;
+            border: 1px solid rgba(0, 110, 255, 0.161);
+            border-radius: 10px;
+            padding: 24px;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+        }
+
+
+
+        /* Mobile fixes */
+        @media (max-width: 991px) {
+            .filters-row {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 767px) {
+            .filters-row {
+                grid-template-columns: 1fr;
+            }
+
+            .scholar-card-footer {
+                flex-direction: column;
+            }
+
+            .scholar-card-footer .btn {
+                width: 100%;
+            }
+
+            .scholar-title {
+                font-size: 1rem;
+            }
+
+            .scholar-logo {
+                width: 50px;
+                height: 50px;
+            }
+        }
+
+        .scholar-card-header {
+            background-color: #e4eefb !important;
+            padding: 10px;
+            border-radius: 10px;
+        }
+
+        .scholar-card {
+            background: #fff;
+            border-radius: 16px;
+            padding: 22px;
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+        }
+
+        .scholar-card:hover {
+            box-shadow: 0 18px 40px rgba(0, 0, 0, 0.12);
+        }
+
+        /* LOGO animation on CARD hover */
+        .scholar-card:hover .scholar-logo {
+            transform: scale(1.15);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .scholar-logo {
+            transition: transform 0.35s ease, box-shadow 0.35s ease;
+        }
+
+        .scholar-logo img {
+            transition: transform 0.35s ease;
+        }
+
+        .scholar-card:hover .scholar-logo img {
+            transform: scale(1.05);
+        }
+
+        .scholar-card-footer {
+            display: flex;
+            align-items: center;
+            margin-top: 10px;
+        }
+
+        .scholar-card-footer .btn-9 {
+            margin-right: auto;
+            /* PUSHES Read More to the right */
+        }
+    </style>
+
+    <section class="py-5">
         <div class="container">
-            <div class="row justify-content-between align-items-start gy-5">
 
-                <!-- LEFT FILTER (DESKTOP ONLY) -->
-                <div class="col-lg-2 d-none d-lg-block">
-                    <aside class="filter-sidebar">
-
+            <!-- FILTER ROW AT TOP -->
+            <div class="row mb-4">
+                <div class="col-12">
+                    <div class="filter-bar">
                         <div class="filter-title">Filter</div>
 
-                        <div class="filter-group">
-                            <label>Level</label>
-                            <select class="form-select filter-select">
-                                <option>Select</option>
-                                <option>Bachelor</option>
-                                <option>Master</option>
-                            </select>
+                        <div class="filters-row">
+                            <div class="filter-group">
+                                <label>Level of study</label>
+                                <select class="form-select filter-select">
+                                    <option>Select</option>
+                                    <option>Bachelor</option>
+                                    <option>Master</option>
+                                </select>
+                            </div>
+
+                            <div class="filter-group">
+                                <label>Type</label>
+                                <select class="form-select filter-select">
+                                    <option>Select</option>
+                                    <option>Merit</option>
+                                    <option>Need Based</option>
+                                </select>
+                            </div>
+
+                            <div class="filter-group">
+                                <label>Gender</label>
+                                <select class="form-select filter-select">
+                                    <option>Select</option>
+                                    <option>Male</option>
+                                    <option>Female</option>
+                                </select>
+                            </div>
+
+                            <div class="filter-group">
+                                <label>Caste</label>
+                                <select class="form-select filter-select">
+                                    <option>Select</option>
+                                    <option>Indian</option>
+                                    <option>International</option>
+                                </select>
+                            </div>
+
+                            <div class="filter-group">
+                                <label>Deadline</label>
+                                <select class="form-select filter-select">
+                                    <option>Select</option>
+                                    <option>Jan - Mar</option>
+                                    <option>Apr - Jun</option>
+                                    <option>Jul - Sep</option>
+                                    <option>Oct - Dec</option>
+                                </select>
+                            </div>
+
+                            <div class="filter-group">
+                                <button class="btn-7 p-2 w-100">
+                                    Clear All
+                                </button>
+                            </div>
                         </div>
-
-                        <div class="filter-group">
-                            <label>Type</label>
-                            <select class="form-select filter-select">
-                                <option>Select</option>
-                                <option>Merit</option>
-                                <option>Need Based</option>
-                            </select>
-                        </div>
-
-                        <div class="filter-group">
-                            <label>Gender</label>
-                            <select class="form-select filter-select">
-                                <option>Select</option>
-                                <option>Male</option>
-                                <option>Female</option>
-                            </select>
-                        </div>
-
-                        <div class="filter-group">
-                            <label>Nationality</label>
-                            <select class="form-select filter-select">
-                                <option>Select</option>
-                                <option>Indian</option>
-                                <option>International</option>
-                            </select>
-                        </div>
-
-                        <div class="filter-group">
-                            <label>Deadline</label>
-                            <select class="form-select filter-select">
-                                <option>Select</option>
-                                <option>Open</option>
-                                <option>Closing Soon</option>
-                            </select>
-                        </div>
-
-                        <button class="btn-7 p-2 w-100 mt-4">
-                            Clear All
-                        </button>
-
-                    </aside>
+                    </div>
                 </div>
-                <style>
-                    .filter-sidebar {
-                        position: sticky;
-                        top: 100px;
-                        padding: 24px 18px;
-                        background: #fff;
-                        border-radius: 5px;
-                        box-shadow: 0 20px 45px rgba(0, 0, 0, 0.06);
-                    }
+            </div>
 
-                    .filter-title {
-                        font-size: 18px;
-                        font-weight: 700;
-                        margin-bottom: 20px;
-                        color: #1f3c88;
-                    }
+            <div class="row justify-content-between align-items-start gy-5">
 
-                    .filter-group {
-                        display: flex;
-                        flex-direction: column;
-                        gap: 6px;
-                        margin-bottom: 18px;
-                    }
+                <!-- Left Content - Scholarship Cards in 2 Columns -->
+                <div class="col-lg-8">
 
-                    .filter-group label {
-                        font-size: 11px;
-                        font-weight: 600;
-                        letter-spacing: .08em;
-                        text-transform: uppercase;
-                        color: #6b7280;
-                    }
 
-                    .filter-select {
-                        border: none;
-                        border-bottom: 2px solid #39496fa4;
-                        border-radius: 0;
-                        padding: 10px 2px;
-                        background: transparent;
-                        font-size: 14px;
-                    }
+                    <!-- Scholarship Cards Grid -->
+                    <div class="row g-3">
+                        <!-- Scholarship Card 1 -->
+                        <div class="col-md-6">
+                            <div class="scholar-card">
+                                <div class="scholar-card-header d-flex align-items-center gap-3">
+                                    <div class="scholar-logo">
+                                        <img src="https://api.learntechww.com/scholarships_logo/logo1721825143149.jpg"
+                                            alt="Scholarship Logo">
+                                    </div>
+                                    <h3 class="scholar-title mb-0">
+                                        Dr. Ambedkar Scholarship
+                                    </h3>
+                                </div>
 
-                    .filter-select:focus {
-                        border-bottom-color: #1f3c88;
-                        box-shadow: none;
-                    }
-                </style>
+                                <ul class="scholar-list">
+                                    <li><strong>International Student Eligible:</strong> No</li>
+                                    <li><strong>Amount:</strong> ₹1200 per annum</li>
+                                    <li><strong>Type:</strong> Merit-Based</li>
+                                    <li><strong>Level of Study:</strong> Master</li>
+                                    <li><strong>Number of Scholarships:</strong> 4</li>
+                                </ul>
 
-                <!-- Left Content -->
-                <div class="col-lg-6">
-                    <h2 class="fw-bold mb-3">
-                        Get in <span style="color: #75a9c8;">Touch</span> With Us
-                    </h2>
+                                <div class="scholar-card-footer">
+                                    <button class="btn btn-9 text-white px-2 py-1">
+                                        Apply Now
+                                    </button>
 
-                    <p class="text-muted mb-3">
-                        Have questions about our courses or scholarship programs?
-                        Fill out the form and our experts will contact you shortly.
-                    </p>
+                                    <a href="#" class="read-more">
+                                        Read More
+                                    </a>
+                                </div>
 
-                    <p class="text-muted mb-4">
-                        We provide personalized counselling, scholarship assistance,
-                        and career-focused learning paths designed for your success.
-                    </p>
-
-                    <!-- Scholarship Card -->
-                    <div class="scholar-card mt-2 mb-2">
-                        <div class="scholar-card-header d-flex align-items-center gap-3">
-                            <div class="scholar-logo">
-                                <img src="https://api.learntechww.com/scholarships_logo/logo1721825143149.jpg"
-                                    alt="Scholarship Logo">
                             </div>
-                            <h3 class="scholar-title mb-0 fs-2">
-                                Dr. Ambedkar Scholarship
-                            </h3>
                         </div>
 
-                        <ul class="scholar-list">
-                            <li><strong>International Student Eligible:</strong> No</li>
-                            <li><strong>Amount:</strong> ₹1200 per annum</li>
-                            <li><strong>Type:</strong> Merit-Based</li>
-                            <li><strong>Level of Study:</strong> Master</li>
-                            <li><strong>Number of Scholarships:</strong> 4</li>
-                        </ul>
+                        <div class="col-md-6">
+                            <div class="scholar-card">
+                                <div class="scholar-card-header d-flex align-items-center gap-3">
+                                    <div class="scholar-logo">
+                                        <img src="https://api.learntechww.com/scholarships_logo/logo1721825143149.jpg"
+                                            alt="Scholarship Logo">
+                                    </div>
+                                    <h3 class="scholar-title mb-0">
+                                        Dr. Ambedkar Scholarship
+                                    </h3>
+                                </div>
 
-                        <a href="#" class="read-more d-inline-block mb-3">
-                            Read More ››
-                        </a>
+                                <ul class="scholar-list">
+                                    <li><strong>International Student Eligible:</strong> No</li>
+                                    <li><strong>Amount:</strong> ₹1200 per annum</li>
+                                    <li><strong>Type:</strong> Merit-Based</li>
+                                    <li><strong>Level of Study:</strong> Master</li>
+                                    <li><strong>Number of Scholarships:</strong> 4</li>
+                                </ul>
 
-                        <div class="scholar-card-footer">
-                            <button class="btn btn-9 text-white px-4">
-                                Apply Now
-                            </button>
-                            <button class="btn btn-outline-dark px-4">
-                                Get Alert
-                            </button>
+                                <div class="scholar-card-footer">
+                                    <button class="btn btn-9 text-white px-2 py-1">
+                                        Apply Now
+                                    </button>
+
+                                    <a href="#" class="read-more">
+                                        Read More
+                                    </a>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="scholar-card">
+                                <div class="scholar-card-header d-flex align-items-center gap-3">
+                                    <div class="scholar-logo">
+                                        <img src="https://api.learntechww.com/scholarships_logo/logo1721825143149.jpg"
+                                            alt="Scholarship Logo">
+                                    </div>
+                                    <h3 class="scholar-title mb-0">
+                                        Dr. Ambedkar Scholarship
+                                    </h3>
+                                </div>
+
+                                <ul class="scholar-list">
+                                    <li><strong>International Student Eligible:</strong> No</li>
+                                    <li><strong>Amount:</strong> ₹1200 per annum</li>
+                                    <li><strong>Type:</strong> Merit-Based</li>
+                                    <li><strong>Level of Study:</strong> Master</li>
+                                    <li><strong>Number of Scholarships:</strong> 4</li>
+                                </ul>
+
+                                <div class="scholar-card-footer">
+                                    <button class="btn btn-9 text-white px-2 py-1">
+                                        Apply Now
+                                    </button>
+
+                                    <a href="#" class="read-more">
+                                        Read More
+                                    </a>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <!-- Scholarship Card 2 -->
+                        <div class="col-md-6">
+                            <div class="scholar-card">
+                                <div class="scholar-card-header d-flex align-items-center gap-3">
+                                    <div class="scholar-logo">
+                                        <img src="https://api.learntechww.com/scholarships_logo/logo1721825143149.jpg"
+                                            alt="Scholarship Logo">
+                                    </div>
+                                    <h3 class="scholar-title mb-0">
+                                        Dr. Ambedkar Scholarship
+                                    </h3>
+                                </div>
+
+                                <ul class="scholar-list">
+                                    <li><strong>International Student Eligible:</strong> No</li>
+                                    <li><strong>Amount:</strong> ₹1200 per annum</li>
+                                    <li><strong>Type:</strong> Merit-Based</li>
+                                    <li><strong>Level of Study:</strong> Master</li>
+                                    <li><strong>Number of Scholarships:</strong> 4</li>
+                                </ul>
+
+                                <div class="scholar-card-footer">
+                                    <button class="btn btn-9 text-white px-2 py-1">
+                                        Apply Now
+                                    </button>
+
+                                    <a href="#" class="read-more">
+                                        Read More
+                                    </a>
+                                </div>
+                            </div>
                         </div>
                     </div>
-
-                    <!-- Scholarship Card -->
-                    <div class="scholar-card mt-2 mb-2">
-                        <div class="scholar-card-header d-flex align-items-center gap-3">
-                            <div class="scholar-logo">
-                                <img src="https://api.learntechww.com/scholarships_logo/logo1721825143149.jpg"
-                                    alt="Scholarship Logo">
-                            </div>
-                            <h3 class="scholar-title mb-0 fs-2">
-                                Dr. Ambedkar Scholarship
-                            </h3>
-                        </div>
-
-                        <ul class="scholar-list">
-                            <li><strong>International Student Eligible:</strong> No</li>
-                            <li><strong>Amount:</strong> ₹1200 per annum</li>
-                            <li><strong>Type:</strong> Merit-Based</li>
-                            <li><strong>Level of Study:</strong> Master</li>
-                            <li><strong>Number of Scholarships:</strong> 4</li>
-                        </ul>
-
-                        <a href="#" class="read-more d-inline-block mb-3">
-                            Read More ››
-                        </a>
-
-                        <div class="scholar-card-footer">
-                            <button class="btn btn-9 text-white px-4">
-                                Apply Now
-                            </button>
-                            <button class="btn btn-outline-dark px-4">
-                                Get Alert
-                            </button>
-                        </div>
+                    <div class="slr-pagination my-5 text-center">
+                        <button class="slr-page prev">&#10094; </button>
+                        <button class="slr-page active">1</button>
+                        <button class="slr-page">2</button>
+                        <button class="slr-page">3</button>
+                        <button class="slr-page next">&#10095; </button>
                     </div>
+                    <style>
+                        .slr-pagination {
+                            display: flex;
+                            justify-content: center;
+                            /* centers the buttons */
+                            gap: 10px;
+                            margin-top: 40px;
+                        }
 
+                        .slr-page {
+                            padding: 4px 14px;
+                            border-radius: 50px;
+                            border: 1px solid #ccc;
+                            background: #fff;
+                            color: #003158;
+                            cursor: pointer;
+                            transition: 0.3s;
+                            font-weight: 400;
+                        }
 
+                        .slr-page:hover:not(.active) {
+                            background: #003158;
+                            color: #fff;
+                        }
+
+                        .slr-page.active {
+                            background: #002e53;
+                            color: #fff;
+                            border-color: #1b2a36;
+                        }
+
+                        .slr-page:disabled {
+                            opacity: 0.5;
+                            cursor: not-allowed;
+                        }
+                    </style>
                 </div>
 
                 <!-- Right Form -->
-                <div class="col-lg-4 g-5 ">
+                <div class="col-lg-4 px-4">
                     <div class="contact-card mb-4">
                         <h4 class="fw-bold text-center mb-3">
                             Contact Us
@@ -972,36 +1423,17 @@
                             <input type="text" class="form-control mb-3" placeholder="Full Name*" required>
                             <input type="email" class="form-control mb-3" placeholder="Email ID*" required>
 
-                            <div class="input-group mb-0 phone-input">
+                            <div class="input-group mb-3 phone-input">
                                 <span class="input-group-text country-code">
                                     IN&nbsp;+91
                                 </span>
                                 <input type="tel" class="form-control" placeholder="Mobile Number*" required>
                             </div>
-                            <style>
-                                .phone-input .country-code {
-                                    min-width: 80px;
-                                    justify-content: center;
-                                    font-weight: 600;
-                                    font-size: 14px;
-                                    background: #fff;
-                                    border-right: 0;
-                                }
-
-                                .phone-input .form-control {
-                                    border-left: 0;
-                                }
-
-                                .phone-input .input-group-text,
-                                .phone-input .form-control {
-                                    height: 48px;
-                                }
-                            </style>
 
                             <input type="text" class="form-control mb-3" placeholder="Interested Course*" required>
                             <input type="text" class="form-control mb-3" placeholder="Location*" required>
 
-                            <textarea class="form-control mb-3" rows="3" placeholder="Type your message"></textarea>
+                            <textarea class="form-control mb-3" rows="2" placeholder="Type your message"></textarea>
 
                             <div class="form-check mb-3">
                                 <input class="form-check-input" type="checkbox" id="terms" required>
@@ -1029,7 +1461,7 @@
                         <div class="interest-text">
                             <h6>Are you interested in this course?</h6>
 
-                            <button class=" btn-8">Check eligibility</button>
+                            <button class="btn-8 px-4 py-2">Check eligibility</button>
                         </div>
                     </div>
                 </div>
@@ -1037,182 +1469,6 @@
             </div>
         </div>
     </section>
-    <style>
-
-         .interest-card {
-            background: linear-gradient(135deg, #ffffff 0%, #d6e9f9 100%);
-            border: 1px solid rgb(206, 218, 242);
-            border-radius: 16px;
-            padding: 28px 20px;
-            box-shadow: 0 8px 24px rgba(13, 110, 253, 0.08);
-            text-align: center;
-            transition: all 0.3s ease;
-        }
-
-        .icon-bubble {
-            border-radius: 50%;
-            margin: 0 auto 16px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            animation: floaty 3s ease-in-out infinite;
-        }
-
-
-        .icon-bubble i {
-            font-size: 42px;
-            color: #0d6efd;
-        }
-
-        /* Read More link */
-        .read-more {
-            font-size: 15px;
-            font-weight: 600;
-            color: #1f3c88;
-            position: relative;
-            padding-right: 18px;
-            transition: color 0.25s ease;
-        }
-
-        .read-more span,
-        .read-more::after {
-            content: "→";
-            position: absolute;
-            right: 0;
-            top: 50%;
-            transform: translateY(-50%);
-            transition: transform 0.25s ease;
-        }
-
-        .read-more:hover {
-            color: #0d6efd;
-        }
-
-        .read-more:hover::after {
-            transform: translate(4px, -50%);
-        }
-
-        /* Footer buttons wrapper */
-        .scholar-card-footer {
-            display: flex;
-            align-items: center;
-            gap: 16px;
-            margin-top: 8px;
-        }
-
-        /* Buttons modern look */
-        .scholar-card-footer .btn {
-            font-weight: 600;
-            border-radius: 2px;
-            padding: 10px 22px;
-            transition:
-                transform 0.25s ease,
-                box-shadow 0.25s ease;
-        }
-
-        /* Primary button */
-        .scholar-card-footer .btn-primary {
-            box-shadow: 0 8px 20px rgba(13, 110, 253, 0.25);
-        }
-
-        .scholar-card-footer .btn-primary:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 14px 30px rgba(13, 110, 253, 0.35);
-        }
-
-        /* Outline button */
-        .scholar-card-footer .btn-outline-dark {
-
-            background-color: white !important;
-        }
-
-        /* Outline button */
-        .scholar-card-footer .btn-outline-dark:hover {
-
-            background-color: rgb(0, 0, 0) !important;
-        }
-
-        /* Mobile */
-        @media (max-width: 767px) {
-            .scholar-card-footer {
-                flex-direction: column;
-                align-items: stretch;
-            }
-        }
-
-        /* Scholarship Card */
-        .scholar-card {
-            background: #dfdfdf;
-            border: 1px solid #56000022;
-            border-radius: 6px;
-            padding: 24px;
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.096);
-        }
-
-        /* Logo */
-        .scholar-logo {
-            width: 76px;
-            height: 76px;
-            border-radius: 12px;
-            background: #fff;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
-        }
-
-        .scholar-logo img {
-            max-width: 70%;
-        }
-
-        .scholar-title {
-            font-size: 1.4rem;
-            font-weight: 700;
-            color: #00226b;
-        }
-
-        /* List */
-        .scholar-list {
-            padding-left: 18px;
-            margin: 16px 0;
-        }
-
-        .scholar-list li {
-            margin-bottom: 8px;
-            font-size: 15px;
-        }
-
-        /* Footer buttons */
-        .scholar-card-footer {
-            display: flex;
-            gap: 16px;
-            flex-wrap: wrap;
-        }
-
-        /* Contact Card */
-        .contact-card {
-            background: #fff;
-            border-radius: 10px;
-            padding: 24px;
-            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
-        }
-
-        /* Mobile fixes */
-        @media (max-width: 767px) {
-            .scholar-card-footer {
-                flex-direction: column;
-            }
-
-            .scholar-title {
-                font-size: 1.2rem;
-            }
-        }
-
-        .contact-card {
-            background-color: #5c708f47;
-            border: 2px solid rgba(0, 110, 255, 0.161);
-        }
-    </style>
 
 
 
@@ -1233,7 +1489,7 @@
                         Bangalore, Karnataka - 560041</p>
                 </div>
 
-               
+
                 <!-- Info -->
                 <div class="col-lg-2 col-md-6 mb-4 pt-5">
                     <h6 class="footer-title">Info</h6>
@@ -1251,11 +1507,11 @@
                         <li><a href="Main-article-page.html">Articles</a></li>
                         <li><a href="Detail-article-page.html">Article Detail</a></li>
                         <li><a href="boards-page.html">Boards</a></li>
-                        
+
                     </ul>
                 </div>
 
-                 <!-- Quick Links -->
+                <!-- Quick Links -->
                 <div class="col-lg-2 col-md-6 mb-4  pt-5">
                     <h6 class="footer-title">Quick Links</h6>
                     <ul class="list-unstyled">

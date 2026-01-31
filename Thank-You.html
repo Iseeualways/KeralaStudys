@@ -23,7 +23,7 @@
         rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-       <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="navbar.css">
 
 
 
@@ -154,7 +154,6 @@
     li {
         font-size: 16px;
     }
-
 </style>
 
 <body>
@@ -163,9 +162,9 @@
         <div class="logo"><img src="https://www.keralastudy.com/images/logo.png" class="w-100" alt=""></div>
         <div class="nav-links">
             <div class="nav-item">Top Colleges</div>
-        
-                <div class="nav-item">Top Courses</div>
-     
+
+            <div class="nav-item">Top Courses</div>
+
             <div class="nav-item">Entrance Exam</div>
             <div class="nav-item">Boards</div>
             <div class="nav-item">News</div>
@@ -555,11 +554,11 @@
             <div class="col-lg-8 mx-auto">
 
                 <div class="check-wrap">
-                    <i class="fa-solid fa-check"></i>
+                    <img src="correct.png" class="img-fluid" alt="">
                 </div>
 
                 <h1 class="big-title">
-                    Thank <span>you</span>.
+                    Thank <span>You</span>
                 </h1>
 
                 <p class="subtitle">
@@ -578,7 +577,7 @@
                     <a href="#"><i class="fab fa-x-twitter"></i></a>
                 </div>
 
-                <a href="/" class="cta-btn">Back to Home</a>
+                <a href="/" class="cta-btn mt-4">Back to Home</a>
 
             </div>
         </div>
@@ -610,9 +609,8 @@
         }
 
         .subtitle {
-            font-size: 1.15rem;
-            max-width: 620px;
-            margin-top: 1.5rem;
+            font-size: 1rem;
+            width: 1500px !important;
             color: #555;
         }
 
@@ -630,7 +628,7 @@
 
         .check-wrap i {
             font-size: 44px;
-            color: var(--accent);
+            color: #001a4f;
         }
 
         @keyframes pop {
@@ -660,21 +658,62 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            color: #222;
-            font-size: 20px;
-            transition: all .3s ease;
+            font-size: 22px;
+            transition: all 0.3s ease;
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
         }
 
-        .socials a:hover {
-            background: var(--accent);
-            color: #fff;
-            transform: translateY(-4px);
+        /* Brand colors */
+        .socials a .fa-facebook-f {
+            color: #ffffff;
         }
+
+        .socials a .fa-instagram {
+            color: #ffffff;
+        }
+
+        .socials a .fa-linkedin-in {
+            color: #ffffff;
+        }
+
+        .socials a .fa-x-twitter {
+            color: #ffffff;
+        }
+
+        /* Hover */
+        .socials a:hover {
+            transform: translateY(-4px);
+            background: #fff;
+            box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15);
+        }
+
+        /* Icon turns white on hover */
+        .socials a:hover i {
+            color: #fff;
+        }
+
+        /* Background becomes brand color on hover */
+        .socials a:nth-child(1) {
+            background: #1877f2;
+        }
+
+        .socials a:nth-child(2) {
+            background: linear-gradient(135deg, #feda75, #fa7e1e, #d62976, #962fbf);
+        }
+
+        .socials a:nth-child(3) {
+            background: #0a66c2;
+        }
+
+        .socials a:nth-child(4) {
+            background: #000;
+        }
+
 
         /* CTA */
         .cta-btn {
             margin-top: 10px;
-            padding: 16px 42px;
+            padding: 10px 22px;
             border-radius: 5px;
             font-weight: 700;
             font-size: 1rem;
@@ -686,7 +725,7 @@
         }
 
         .cta-btn:hover {
-            background: #000;
+            background: #75a9c8;
         }
 
         /* Decorative Gradient */
@@ -701,6 +740,14 @@
             z-index: -1;
         }
 
+        .thank-hero .col-lg-8 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+
         /* Responsive */
         @media (max-width: 768px) {
             .thank-hero {
@@ -710,6 +757,115 @@
             .socials {
                 justify-content: center;
             }
+        }
+    </style>
+
+
+    <section class="container mt-3 mb-4">
+
+        <div class="row g-4">
+
+            <!-- CARD 1 -->
+            <!-- CARD 1 -->
+            <div class="col-lg-2 col-md-4 col-6">
+                <div class="course-card">
+                    <h6>Dental</h6>
+                </div>
+            </div>
+
+            <!-- CARD 2 -->
+            <div class="col-lg-2 col-md-4 col-6">
+                <div class="course-card">
+                    <h6>Civil</h6>
+                </div>
+            </div>
+
+            <!-- CARD 3 -->
+            <div class="col-lg-2 col-md-4 col-6">
+                <div class="course-card">
+                    <h6>MBA</h6>
+                </div>
+            </div>
+
+            <!-- CARD 4 -->
+            <div class="col-lg-2 col-md-4 col-6">
+                <div class="course-card">
+                    <h6>LLB</h6>
+                </div>
+            </div>
+
+            <!-- CARD 5 -->
+            <div class="col-lg-2 col-md-4 col-6">
+                <div class="course-card">
+                    <h6>Design</h6>
+                </div>
+            </div>
+
+            <!-- CARD 6 -->
+            <div class="col-lg-2 col-md-4 col-6">
+                <div class="course-card">
+                    <h6>Computer Science</h6>
+                </div>
+            </div>
+
+            <div class="col-lg-2 col-md-4 col-6">
+                <div class="course-card">
+                   <h6>B.Tech</h6>
+                </div>
+            </div>
+
+            <div class="col-lg-2 col-md-4 col-6">
+                <div class="course-card">
+                   <h6>MBA</h6>
+                </div>
+            </div>
+
+            <div class="col-lg-2 col-md-4 col-6">
+                <div class="course-card">
+                 <h6>LLB</h6>
+                </div>
+            </div>
+
+            <div class="col-lg-2 col-md-4 col-6">
+                <div class="course-card">
+                   <h6>MBBS</h6>
+                </div>
+            </div>
+
+            <div class="col-lg-2 col-md-4 col-6">
+                <div class="course-card">
+                 <h6>B.Arch</h6>
+                </div>
+            </div>
+
+            <div class="col-lg-2 col-md-4 col-6">
+                <div class="course-card">
+                   <h6>B.Pharm</h6>
+                </div>
+            </div>
+        </div>
+    </section>
+    <style>
+        .course-card {
+            background: #dae5fa;
+            border-radius: 10px;
+            padding: 25px 15px;
+            text-align: center;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            height: 100%;
+        }
+
+
+        .course-card h6 {
+            font-size: 16px;
+            font-weight: 600;
+            margin: 0;
+            color: #1e293b;
+        }
+
+        .course-card:hover {
+            box-shadow: 0 18px 40px rgba(0, 0, 0, 0.15);
         }
     </style>
 
@@ -732,7 +888,7 @@
                         Bangalore, Karnataka - 560041</p>
                 </div>
 
-                
+
                 <!-- Info -->
                 <div class="col-lg-2 col-md-6 mb-4 pt-5">
                     <h6 class="footer-title">Info</h6>
@@ -750,7 +906,7 @@
                         <li><a href="Main-article-page.html">Articles</a></li>
                         <li><a href="Detail-article-page.html">Article Detail</a></li>
                         <li><a href="boards-page.html">Boards</a></li>
-                        
+
                     </ul>
                 </div>
 
