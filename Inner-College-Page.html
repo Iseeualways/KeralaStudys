@@ -1378,7 +1378,6 @@
         </div>
     </section>
     <style>
-    
         /* HERO */
         .hero-40vh {
             height: 45vh;
@@ -1543,7 +1542,7 @@
         <span class="divider" aria-hidden="true">›</span>
         <span>College</span>
         <span class="divider" aria-hidden="true">›</span>
-        <span class="current">Inner-College</span>
+        <span class="current">Inner College</span>
     </nav>
 
     <style>
@@ -1760,6 +1759,29 @@
 
 
     <style>
+        .facility-item img {
+            width: 72px;
+            height: 72px;
+            object-fit: contain;
+            margin-bottom: 6px;
+            transition: transform 0.4s ease, filter 0.4s ease;
+            z-index: 1;
+        }
+
+        /* ACTIVE STATE IMAGE */
+        .facility-item.active img {
+            transform: rotate(10deg) scale(1);
+
+        }
+
+        /* MOBILE */
+        @media(max-width: 767px) {
+            .facility-item img {
+                width: 26px;
+                height: 26px;
+            }
+        }
+
         .facilities-section {
             padding: 30px 0;
             text-align: center;
@@ -1802,8 +1824,8 @@
         .facility-item {
             background: #fff;
             border-radius: 10%;
-            width: 120px;
-            height: 120px;
+            width: 130px;
+            height: 130px;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -1845,10 +1867,14 @@
         }
 
         .facility-item.active {
-            transform: scale(1.25) rotate(1deg);
-            background: linear-gradient(120deg, #003479, #003479);
+            transform: scale(1) rotate(1deg);
+            background: radial-gradient(circle,
+                    #597dbb 0%,
+                    #003479 60%);
+
+
             color: #fff;
-            border-radius: 50% !important;
+            border-radius: 40% !important;
         }
 
         .facility-item.active::before {
@@ -1898,46 +1924,51 @@
         }
     </style>
 
-
     <section class="facilities-section mt-5 mb-3">
         <div class="container">
             <h4 class="mb-5 fs-2">Facilities & Infrastructure</h4>
             <div class="row g-4 justify-content-center">
                 <div class="col-6 col-md-2">
                     <div class="facility-item">
-                        <i class="fa-solid fa-flask"></i>
-                        <p>Laboratory</p>
+                        <img src="Facilities-img/basketball.png" alt="Laboratory">
+                        <p>Sports</p>
                     </div>
+
                 </div>
                 <div class="col-6 col-md-2">
                     <div class="facility-item">
-                        <i class="fa-solid fa-building"></i>
-                        <p>Boys Hostel</p>
+                        <img src="Facilities-img/canteen.png" alt="Laboratory">
+                        <p>Canteen</p>
                     </div>
+
                 </div>
                 <div class="col-6 col-md-2">
                     <div class="facility-item">
-                        <i class="fa-solid fa-house-user"></i>
-                        <p>Girls Hostel</p>
-                    </div>
-                </div>
-                <div class="col-6 col-md-2">
-                    <div class="facility-item">
-                        <i class="fa-solid fa-mug-hot"></i>
-                        <p>Cafeteria</p>
-                    </div>
-                </div>
-                <div class="col-6 col-md-2">
-                    <div class="facility-item">
-                        <i class="fa-solid fa-book"></i>
-                        <p>Library</p>
-                    </div>
-                </div>
-                <div class="col-6 col-md-2">
-                    <div class="facility-item">
-                        <i class="fa-solid fa-dumbbell"></i>
+                        <img src="Facilities-img/gym.png" alt="Laboratory">
                         <p>Gym</p>
                     </div>
+
+                </div>
+                <div class="col-6 col-md-2">
+                    <div class="facility-item">
+                        <img src="Facilities-img/hotel.png" alt="Laboratory">
+                        <p>Hostel</p>
+                    </div>
+
+                </div>
+                <div class="col-6 col-md-2">
+                    <div class="facility-item">
+                        <img src="Facilities-img/laboratory.png" alt="Laboratory">
+                        <p>Laboratory</p>
+                    </div>
+
+                </div>
+                <div class="col-6 col-md-2">
+                    <div class="facility-item">
+                        <img src="Facilities-img/stack-of-books.png" alt="Laboratory">
+                        <p>Library</p>
+                    </div>
+
                 </div>
             </div>
         </div>
@@ -1958,6 +1989,8 @@
     </script>
 
 
+
+
     <section class="school-hero-v2">
         <div class="school-hero-overlay"></div>
 
@@ -1973,6 +2006,7 @@
             <a href="#" class="school-hero-btn">Apply Now</a>
         </div>
     </section>
+
     <style>
         .school-hero-v2 {
             position: relative;
@@ -1981,7 +2015,7 @@
             align-items: center;
             justify-content: center;
             text-align: center;
-            background: url("8609213_5853.jpg") center / cover no-repeat;
+            background: url("nri-banner.jpg") center / cover no-repeat;
             padding: 40px 20px;
         }
 
@@ -2059,7 +2093,7 @@
     </style>
     <!-- ===========================================================LOCATION -->
 
-   
+
     <style>
         :root {
             --navy: #0f2040;
@@ -2144,7 +2178,7 @@
             max-width: 70%;
             max-height: 70%;
             object-fit: contain;
-           
+
         }
 
         .edu-left-card__logo-text {
@@ -2364,7 +2398,7 @@
 
     <section class="edu-section">
         <div class="container">
-               <h4 class="fs-2 text-center mb-5">Locate the College</h4>
+            <h4 class="fs-2 text-center mb-5">Locate the College</h4>
             <div class="row g-4 align-items-stretch">
 
                 <!-- LEFT -->
@@ -2566,7 +2600,8 @@
     </style>
 
     <section>
-        <h2 class="mb-4 text-center">Start Your Future with <span style="color: #75a9c8;">Kerala’s Top Colleges</span>
+        <h2 class="mb-4 text-center text-primary-emphasis">
+            Start Your Future with <span style="color: #4a95c0;">Kerala’s Top Schools</span>
         </h2>
         <div class="carousel-wrapper">
 

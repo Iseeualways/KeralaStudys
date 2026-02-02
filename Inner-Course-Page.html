@@ -119,8 +119,8 @@
         position: relative;
         display: inline-block;
         padding: 10px 22px;
-        background: white;
-        color: #003479;
+        background: #003479;
+        color: #ffffff;
         font-size: 16px;
         font-weight: 400;
         border-radius: 3px;
@@ -137,7 +137,7 @@
         content: "";
         position: absolute;
         inset: 0;
-        background: #003479;
+        background: #ffffff;
         border: 1px solid #003479 !important;
         transform: scaleY(0);
         transform-origin: top;
@@ -147,7 +147,7 @@
 
     /* Hover effect */
     .btn-blue:hover {
-        color: #ffffff;
+        color: #003479;
         border: 1px solid #003479 !important;
     }
 
@@ -1139,51 +1139,271 @@
                         <button class="btn btn-blue">Check eligibility</button>
                     </div>
                 </div>
-                <div class="college-card mt-4">
-                    <div class="college-header">
-                        <h5>Top Dental Colleges</h5>
-                    </div>
-                    <div class="college-item mb-3">
-                        <img src="https://api.learntechww.com/college_banner_image/logo1747821131641.webp"
-                            alt="College Logo">
-                        <div class="college-text">
-                            <h6>Dr. Chandramma Dayananda Sagar Institute (CDSIMER)
-                            </h6>
-                            <p>Bangalore</p>
+
+
+                <div class="sidebar-upcoming-exams mt-5">
+                    <h4 class="sidebar-title fs-5 text-center">Upcoming Exams</h4>
+
+                    <div class="sidebar-exam-list">
+
+                        <div class="sidebar-exam-item active">
+                            <div class="exam-date-badge">
+                                <span class="day">12</span>
+                                <span class="month">FEB</span>
+                            </div>
+                            <div class="exam-info">
+                                <h5>GATE 2025</h5>
+                                <p>Graduate Aptitude Test</p>
+                            </div>
                         </div>
+
+                        <div class="sidebar-exam-item">
+                            <div class="exam-date-badge">
+                                <span class="day">05</span>
+                                <span class="month">APR</span>
+                            </div>
+                            <div class="exam-info">
+                                <h5>JEE Main 2025</h5>
+                                <p>Engineering Entrance</p>
+                            </div>
+                        </div>
+
+                        
+
+                        <div class="sidebar-exam-item">
+                            <div class="exam-date-badge">
+                                <span class="day">18</span>
+                                <span class="month">JUL</span>
+                            </div>
+                            <div class="exam-info">
+                                <h5>CAT 2025</h5>
+                                <p>Management Entrance</p>
+                            </div>
+                        </div>
+
                     </div>
 
-                    <div class="college-item">
-                        <img src="https://api.learntechww.com/college_banner_image/logo1747821131641.webp"
-                            alt="College Logo">
-                        <div class="college-text">
-                            <h6>Dr. Chandramma Dayananda Sagar Institute (CDSIMER)
-                            </h6>
-                            <p>Bangalore</p>
-                        </div>
-                    </div>
+                    <a href="#" class="view-all-exams">View all upcoming exams →</a>
                 </div>
-                <div class="exam-card mt-4">
-                    <div class="exam-header">
-                        <h5>Top Dental Exams</h5>
-                    </div>
+                <style>
+                    .sidebar-upcoming-exams {
+                        background: #d4e3f967;
+                        border-radius: 10px;
+                        padding: 16px;
 
-                    <div class="exam-item">
-                        <img src="https://api.learntechww.com/exam_logo/logo1722428079427.png" alt="NEET UG Logo"
-                            class="exam-img">
-                        <div class="exam-text">
-                            <h6>NEET-UG</h6>
+                        border: 1px solid #94bdffa3;
+                    }
+
+                    .sidebar-title {
+                        font-size: 17px;
+                        font-weight: 700;
+                        margin-bottom: 12px;
+                        color: #0b2d6f;
+                    }
+
+                    /* List */
+                    .sidebar-exam-list {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 10px;
+                    }
+
+                    /* Item */
+                    .sidebar-exam-item {
+                        display: flex;
+                        align-items: center;
+                        gap: 12px;
+
+                        padding: 15px 10px;
+                        border-radius: 8px;
+                        background: #ffffff;
+
+                        transition: all 0.25s ease;
+                    }
+
+                    .sidebar-exam-item:hover {
+                        background: #e0e9ff;
+                    }
+
+                    .sidebar-exam-item:active {
+                        background: #e0e9ff;
+                    }
+
+
+
+                    /* Date badge */
+                    .exam-date-badge {
+                        min-width: 72px;
+                        text-align: center;
+                        background: #63a4d2;
+                        color: #fff;
+                        border-radius: 8px;
+                        padding: 6px 0;
+                    }
+
+                    .exam-date-badge .day {
+                        font-size: 26px;
+                        font-weight: 700;
+                        line-height: 1;
+                    }
+
+                    .exam-date-badge .month {
+                        font-size: 14px;
+                        letter-spacing: 0.8px;
+                        opacity: 0.9;
+                    }
+
+                    /* Info */
+                    .exam-info h5 {
+                        font-size: 16px;
+                        margin: 0;
+                        font-weight: 600;
+                    }
+
+                    .exam-info p {
+                        font-size: 12.5px;
+                        margin: 2px 0 0;
+                        color: #6b7280;
+                    }
+
+                    /* View All */
+                    .view-all-exams {
+                        display: block;
+                        margin-top: 12px;
+                        text-align: right;
+
+                        font-size: 13.5px;
+                        font-weight: 600;
+                        color: #1f3e8b;
+                        text-decoration: none;
+                    }
+
+                    .view-all-exams:hover {
+                        text-decoration: underline;
+                    }
+
+
+                    .news-container h5 {
+                        color: #000;
+                        font-size: 15px !important;
+                        font-weight: 400;
+                    }
+
+                    .news-container {
+                        border: 1px solid rgb(201, 201, 201);
+                    }
+
+                    :root {
+                        --orange: #ff6a00;
+                    }
+
+                    .exam-section {
+                        background: #ffffff;
+                    }
+
+                    .exam-card {
+                        transition: 0.3s ease;
+                        width: 250px;
+                    }
+
+                    .exam-card:hover {
+                        transform: translateY(-6px);
+                        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+                    }
+
+                    .contact-card {
+                        background-color: #d4e3f967 !important;
+                        border: 1px solid rgba(0, 98, 255, 0.192) !important;
+                    }
+
+                    .contact-card input,
+                    .contact-card textarea {
+                        border-radius: 8px;
+                    }
+                </style>
+
+                <div class="college-card-minimal mt-5">
+                        <h5 class="college-title fs-5">
+                            Top Kerala Colleges
+                        </h5>
+                        <div class="college-row">
+                            <img src="https://api.learntechww.com/landingpage_logo/logo1735024605162.jpg" alt="">
+                            <div>
+                                <p>Christ (Deemed-to-be University), Bangalore</p>
+                                <span>Bangalore</span>
+                            </div>
+                        </div>
+                        <div class="college-row">
+                            <img src="https://api.learntechww.com/landingpage_logo/logo1722429952456.png" alt="">
+                            <div>
+                                <p>Yenepoya University</p>
+                                <span>Bangalore</span>
+                            </div>
+                        </div>
+
+                        <div class="college-row">
+                            <img src="https://api.learntechww.com/landingpage_logo/logo1735017979563.jpg" alt="">
+                            <div>
+                                <p>S-VYASA University</p>
+                                <span>Bangalore</span>
+                            </div>
                         </div>
                     </div>
+                    <style>
+                        .college-card-minimal {
+                            background: #edf4fd;
+                            border-radius: 16px;
+                            padding: 24px 20px;
+                            border: 1px solid #eef2f6;
+                        }
 
-                    <div class="exam-item">
-                        <img src="https://api.learntechww.com/exam_logo/logo1722428079427.png" alt="COMEDK UGET Logo"
-                            class="exam-img">
-                        <div class="exam-text">
-                            <h6>COMEDK UGET</h6>
-                        </div>
-                    </div>
-                </div>
+                        /* Title */
+                        .college-title {
+                            font-size: 18px;
+                            font-weight: 700;
+                            color: #001e65;
+                            text-align: center;
+                            margin-bottom: 20px;
+                        }
+
+                        /* Row */
+                        .college-row {
+                            display: flex;
+                            align-items: center;
+                            gap: 20px !important;
+                            padding: 15px 8px;
+                            border-radius: 22px;
+                            transition: all 0.25s ease;
+                            cursor: pointer;
+                            border-left: 2px solid transparent;
+                        }
+
+                        .college-row:hover {
+                            background: #f8fafc;
+                            transform: translateY(-2px);
+                        }
+
+                        /* Logo */
+                        .college-row img {
+                            width: 90px;
+                            height: 90px;
+                            border-radius: 50%;
+                            object-fit: cover;
+                        }
+
+                        /* Text */
+                        .college-row p {
+                            margin: 0;
+                            font-size: 14px;
+                            font-weight: 500;
+                            color: #0f172ae3;
+                        }
+
+                        .college-row span {
+                            font-size: 12px;
+                            color: #64748b;
+                        }
+                    </style>
 
             </div>
         </div>
@@ -1377,7 +1597,7 @@
         }
     </style>
     <div class="container text-center position-relative px-5 py-4">
-        <h4><span style="color: #4a95c0;">Other Top</span> <span style="color:#4a95c0;">Courses</span></h4>
+        <h4><span style="color: #052c65;">Other Top</span> <span style="color:#4a95c0;">Courses</span></h4>
 
         <!-- Navigation Icons -->
         <button class="nav-btn prev-btn">
@@ -1525,7 +1745,7 @@
 
     <section>
         <div class="container text-center mt-5">
-            <h4 class="mb-4">Top MBA Study Approach <span style="color: #75a9c8;">Specialization</span></h4>
+            <h4 class="mb-4">Top MBA Study Approach <span style="color: #4a95c0;">Specialization</span></h4>
             <p class="text-start">Learntech Edu Solutions Pvt. Ltd. follows a holistic approach toward admission to the
                 stream of your
                 dreams. The experts will help you to navigate your way to your dream college and course that will align
