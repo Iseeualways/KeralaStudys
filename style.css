@@ -1472,123 +1472,180 @@ section.news-exams {
     color: #0073ff;
 }
 
-/* -----------------------------------footer css code */
+
+
+/* FOOTER BASE */
 .footer {
-    background-color: #0c2a45;
-    color: #fff;
-    padding: 40px 20px 20px;
+    background: linear-gradient(270deg,#286f98, #102648);
+    color: #ffffff;
+    padding: 20px 0 25px;
 
 }
 
-.footer a {
-    color: #fff;
-    text-decoration: none;
-    transition: 0.3s;
-    font-size: 15px;
+.footer .container {
+    max-width: 1320px;
+}
+
+/* LEFT SECTION */
+.footer-left {
+    padding-right: 40px;
+}
+
+.footer-logo {
+    height: 82px;
+}
+
+.footer-left p {
+    font-size: 16px;
     font-weight: 300;
-}
-
-.footer a:hover {
-    color: #f1a470;
-}
-
-.footer .footer-logo img {
-    height: 65px;
-}
-
-.footer .footer-title {
-    font-weight: 600;
-    margin-bottom: 15px;
-    font-size: 20px;
-}
-
-.footer .download-btn img {
-    max-width: 140px;
+    line-height: 1.8;
+    opacity: 1;
     margin-bottom: 10px;
 }
 
-.footer .social-icons a {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 36px;
-    height: 36px;
-    border-radius: 50%;
-    background: #fff;
-    color: #0b2a66;
-    margin: 0 5px;
-    font-size: 16px;
+/* COLUMNS */
+.footer-col {
+    padding-top: 10px;
 }
 
-.footer .social-icons a:hover {
-    background: #cdddf7;
+.footer-title {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 18px;
 }
 
-.footer-bottom {
-    border-top: 1px solid rgba(255, 255, 255, 0.2);
-    margin-top: 30px;
-    padding-top: 15px;
-    text-align: center;
-    font-size: 14px;
-    display: flex;
+/* LIST RESET */
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-col ul li {
+    margin-bottom: 6px;
+}
+/* LINK */
+.footer-col ul li a {
+    position: relative;
+    display: inline-block;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 300 !important;
+    padding-bottom: 2px;
+    text-decoration: none;
+}
+
+/* LINE */
+.footer-col ul li a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #4a95c0;
+
+    transform: scaleX(0);
+    transform-origin: right; /* 👈 important */
+    transition: transform 0.35s ease;
+}
+
+/* HOVER */
+.footer-col ul li a:hover {
+    color: #7baecb;
+}
+
+.footer-col ul li a:hover::after {
+    transform: scaleX(1);
+    transform-origin: left; /* 👈 comes from left */
 }
 
 .download-brochure {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
     padding: 10px 20px;
-    background: #000f34;
-    color: #0b2a66;
-    border-radius: 8px;
-    font-weight: 500;
-    text-decoration: none;
-    border: 2px solid rgb(255, 255, 255);
-    transition: all 0.3s ease;
-    /* smooth transition for all properties */
-    border-radius: 50px;
-}
-
-.download-brochure:hover {
-
-    /* subtle zoom */
+    border-radius: 12px;
+    background: #72a6c4a6;
     color: #ffffff;
-    /* optional color change on hover */
-    background: #0b2a66;
-    /* optional background change on hover */
-    border-color: #001a4f;
-    /* optional border change */
+    font-weight: 500;
+    backdrop-filter: blur(10px);
+    text-decoration: none;
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    transition: all 0.35s ease;
+}
+
+/* ICON */
+.download-brochure i {
+    font-size: 15px;
+    opacity: 0.9;
+    transition: transform 0.35s ease;
+}
+
+/* HOVER */
+.download-brochure:hover {
+    background: #ffffffdf;
+    color: #142f5b;
+}
+
+/* ICON MOVE */
+.download-brochure:hover i {
+    transform: translateY(3px);
 }
 
 
-.text-right {
-    display: flex;
-    justify-content: flex-end;
-    /* pushes content to the right */
-    align-items: flex-end;
-    /* vertically centers if needed */
-}
-
+/* FOOTER BOTTOM */
 .footer-bottom {
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-    /* optional separator */
-    padding-top: 15px;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    margin-top: 35px;
+    padding-top: 18px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.footer-bottom p {
+    margin: 0;
     font-size: 14px;
-    color: #fff;
+    opacity: 0.8;
 }
 
-.footer-bottom .social-icons a {
-    color: #000000;
-    margin-left: 12px;
-    font-size: 16px;
-    transition: color 0.3s;
+/* SOCIAL ICONS */
+.social-icons a {
+    width: 36px;
+    height: 36px;
+    background: #ffffff;
+    color: #00226b;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    border-radius: 20%;
+    margin-left: 8px;
+    transition: all 0.3s ease;
 }
 
-.footer-bottom .social-icons a:hover {
-    color: #f1a470;
-    /* highlight on hover */
+.social-icons a:hover {
+    background: #00226b;
+    color: #ffffff;
 }
 
-.left-text p {
-    font-size: 16px;
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .footer {
+        text-align: center;
+    }
+
+    .footer-left {
+        padding-right: 0;
+        margin-bottom: 30px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        gap: 12px;
+    }
 }
 
 .form-bg {
@@ -2233,22 +2290,23 @@ select:focus {
 .section {
     position: relative;
     padding: 80px 8%;
-    background-image: url('home-background/419320621_cbb9da9a-92f3-4270-a7ab-51548b6e387e.jpg.jpeg');
+    background-image: url('home-background/14308643_5463205.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     overflow: hidden;
 }
 
+
 .section::before {
     content: "";
     position: absolute;
     inset: 0;
-    background: radial-gradient(circle at center, 
-        rgb(255, 255, 255) 0%, 
-        rgb(255, 255, 255) 40%, 
-        rgba(255, 255, 255, 0.267) 70%, 
-        rgba(255, 255, 255, 0) 100%);
+    background: radial-gradient(circle at center,
+            rgb(255, 255, 255) 0%,
+            rgb(255, 255, 255) 40%,
+            rgba(255, 255, 255, 0.267) 70%,
+            rgba(255, 255, 255, 0) 100%);
     z-index: 1;
 }
 

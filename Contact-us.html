@@ -979,7 +979,7 @@
 
         /* Info Card */
         .info-card {
-            background: linear-gradient(135deg, #75a9c8, #003479);
+            background: linear-gradient(135deg,#003479 , #75a9c8 );
             border-radius: 24px;
             padding: 45px;
             color: white;
@@ -1014,8 +1014,8 @@
 
         .info-card h3 {
             font-weight: 800;
-            font-size: 42px;
-            margin-bottom: 20px;
+            font-size: 38px;
+            margin-bottom: 10px;
             position: relative;
             z-index: 1;
             line-height: 1.2;
@@ -1024,7 +1024,7 @@
         .info-card .description {
             font-size: 16px;
             line-height: 1.8;
-            margin-bottom: 35px;
+           
             opacity: 0.95;
             position: relative;
             z-index: 1;
@@ -1037,24 +1037,24 @@
         }
 
         .contact-item {
-            background: rgba(255, 255, 255, 0.1);
+            background: rgba(255, 255, 255, 0.8);
             backdrop-filter: blur(10px);
             border-radius: 16px;
-            padding: 20px;
+            padding: 5px;
             margin-bottom: 20px;
             border: 1px solid rgba(255, 255, 255, 0.2);
             transition: all 0.3s ease;
         }
 
         .contact-item:hover {
-            background: rgba(255, 255, 255, 0.15);
-            transform: translateX(10px);
+            background: rgba(255, 255, 255, 0.939);
+           
         }
 
         .contact-item .icon {
             width: 45px;
             height: 45px;
-            background: rgba(255, 255, 255, 0.4);
+            background: rgba(37, 73, 94, 0.18);
             border-radius: 12px;
             display: flex;
             align-items: center;
@@ -1065,7 +1065,7 @@
 
         .contact-item-content strong {
             display: block;
-            color: #ffd27d;
+            color: #005aa4;
             font-size: 16px;
             font-weight: 600;
             margin-bottom: 5px;
@@ -1075,7 +1075,7 @@
 
         .contact-item-content span,
         .contact-item-content a {
-            color: white;
+            color: rgb(0, 0, 0) !important;
             font-size: 15px;
             text-decoration: none;
             display: block;
@@ -1128,6 +1128,9 @@
             left: 5%;
             animation-delay: 2s;
         }
+        .country-code {
+    max-width: 82px;
+}
     </style>
 
     <section class="contact-section">
@@ -1143,8 +1146,7 @@
                         <h3>Let's Connect & Transform Your Future</h3>
                         <p class="description">
                             Ready to take the next step? Our expert advisors are here to guide you through every stage
-                            of your educational journey. Share your details and let's create your success story
-                            together!
+                            of your educational journey.
                         </p>
 
                         <div class="contact-info-wrapper">
@@ -1156,7 +1158,7 @@
                                 <div class="contact-item-content flex-grow-1">
                                     <strong>Toll-Free Helpline</strong>
                                     <span>1800-120-8696</span>
-                                    <small>Monday to Saturday | 9am to 6pm</small>
+                                    <small class="text-dark">Monday to Saturday | 9am to 6pm</small>
                                 </div>
                             </div>
 
@@ -1202,44 +1204,69 @@
                         <h3>Get Personalized Support</h3>
                         <p class="subtitle">Fill out the form below and our team will reach out to you shortly!</p>
 
-                        <form>
-                            <input type="text" class="form-control" placeholder="Full Name *" required>
+                        <form class="contact-form">
 
-                            <input type="email" class="form-control" placeholder="Email Address *" required>
+                            <div class="row gy-1">
+                                <div class="col-md-6">
+                                    <input type="text" class="form-control" placeholder="Full Name *" required>
+                                </div>
 
-                            <!-- Phone -->
-                            <div class="d-flex gap-2">
-                                <select class="form-select country-code">
-                                    <option selected>🇮🇳 +91</option>
-                                    <option>🇺🇸 +1</option>
-                                    <option>🇬🇧 +44</option>
-                                    <option>🇦🇪 +971</option>
-                                </select>
-                                <input type="tel" class="form-control" placeholder="Phone Number *" required>
+                                <div class="col-md-6">
+                                    <input type="email" class="form-control" placeholder="Email Address *" required>
+                                </div>
+
+                                <!-- Phone -->
+                                <div class="col-md-6">
+                                    <div class="d-flex gap-2">
+                                        <select class="form-select country-code">
+                                            <option selected>🇮🇳 +91</option>
+                                            <option>🇺🇸 +1</option>
+                                            <option>🇬🇧 +44</option>
+                                            <option>🇦🇪 +971</option>
+                                        </select>
+                                        <input type="tel" class="form-control" placeholder="Phone Number *" required>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <input type="text" class="form-control" placeholder="Your Location *" required>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <input type="text" class="form-control" placeholder="Preferred Course *" required>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <input type="text" class="form-control" placeholder="Preferred College (Optional)">
+                                </div>
+
+                                <!-- Full width textarea -->
+                                <div class="col-12">
+                                    <textarea class="form-control" rows="3"
+                                        placeholder="Tell us about your goals and interests..."></textarea>
+                                </div>
+
+                                <!-- Full width checkbox -->
+                                <div class="col-12">
+                                    <div class="form-check mt-2 mb-4">
+                                        <input class="form-check-input" type="checkbox" id="termsCheck" required>
+                                        <label class="form-check-label" for="termsCheck">
+                                            I agree to the <a href="#">Terms & Conditions</a> and <a href="#">Privacy
+                                                Policy</a>
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <!-- Submit -->
+                                <div class="col-12 text-center">
+                                    <button type="submit" class="btn btn-blue">
+                                        <i class="fas fa-paper-plane me-2"></i>Submit Application
+                                    </button>
+                                </div>
                             </div>
 
-                            <input type="text" class="form-control" placeholder="Your Location *" required>
-
-                            <input type="text" class="form-control" placeholder="Preferred Course *" required>
-
-                            <input type="text" class="form-control" placeholder="Preferred College (Optional)">
-
-                            <textarea class="form-control" rows="3"
-                                placeholder="Tell us about your goals and interests..."></textarea>
-
-                            <div class="form-check mt-2 mb-4">
-                                <input class="form-check-input" type="checkbox" id="termsCheck" required>
-                                <label class="form-check-label" for="termsCheck">
-                                    I agree to the <a href="#">Terms & Conditions</a> and <a href="#">Privacy Policy</a>
-                                </label>
-                            </div>
-
-                            <div class="text-center">
-                                <button type="submit" class="btn btn-blue">
-                                    <i class="fas fa-paper-plane me-2"></i>Submit Application
-                                </button>
-                            </div>
                         </form>
+
                     </div>
                 </div>
             </div>
@@ -1420,7 +1447,7 @@
 
             <!-- Copyright -->
             <div class="footer-bottom mt-4 d-flex justify-content-between align-items-center left-text">
-                <p class="mb-0">©2025 Learntech Edu Solutions Pvt. Ltd. All Rights Reserved.</p>
+                <p class="mb-0">©2026 Keralastudy.com All Rights Reserved.</p>
 
                 <div class="d-flex align-items-center ">
                     <p class="mb-0 me-2">Follow us on</p>

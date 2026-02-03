@@ -769,7 +769,8 @@
                         to quality education, regardless of their financial situation.
                         The availability of these scholarships ensures that deserving students have access
                         to quality education, regardless of their financial situation and postgraduate students, both
-                        within the country and abroad. and postgraduate students. within the country and abroad. and postgraduate students.
+                        within the country and abroad. and postgraduate students. within the country and abroad. and
+                        postgraduate students.
                     </p>
                 </div>
 
@@ -797,9 +798,9 @@
     </section>
 
     <style>
-        .scholar-top h4{
-    margin-top: 0 !important;
-}
+        .scholar-top h4 {
+            margin-top: 0 !important;
+        }
 
         .img-wrap img {
             display: block;
@@ -1435,15 +1436,49 @@
 
                             <textarea class="form-control mb-3" rows="2" placeholder="Type your message"></textarea>
 
-                            <div class="form-check mb-3">
+                             <div class="form-check terms-inline mb-3">
                                 <input class="form-check-input" type="checkbox" id="terms" required>
-                                <label class="form-check-label small" for="terms">
-                                    I agree to the
-                                    <a href="#" class="text-primary text-decoration-none">
-                                        Terms & Conditions
-                                    </a>
+                                <label class="form-check-label" for="terms">
+                                    By clicking this, I agree to the
+                                    <a href="#" class="terms-link">Terms & <br>Conditions</a>
                                 </label>
                             </div>
+
+                            <style>
+                                .form-check {
+                                    padding: 0px !important;
+                                }
+                                .terms-inline {
+                                    display: flex;
+                                    align-items: center;
+                                    gap: 8px;
+                                    white-space: nowrap;
+                                    /* 🔥 forces one line */
+                                }
+
+                                .terms-inline .terms-link {
+                                    color: #003479;
+                                    font-weight: 600;
+                                    text-decoration: none;
+                                }
+
+                                .terms-inline .terms-link:hover {
+                                    text-decoration: underline;
+                                }
+
+                                /* Force small checkbox for terms */
+                                .terms-inline .form-check-input {
+                                    width: 18px !important;
+                                    height: 18px !important;
+                                    min-width: 13px;
+                                    min-height: 13px;
+                                    padding: 0;
+                                    margin-top: 0;
+                                    transform: scale(0.85);
+                                    /* visually smaller */
+                                }
+                            </style>
+
 
                             <button type="submit" class="btn-8 w-100 py-2 fw-semibold">
                                 Submit
@@ -1566,7 +1601,7 @@
 
             <!-- Copyright -->
             <div class="footer-bottom mt-4 d-flex justify-content-between align-items-center left-text">
-                <p class="mb-0">©2025 Learntech Edu Solutions Pvt. Ltd. All Rights Reserved.</p>
+                <p class="mb-0">©2026 Keralastudy.com All Rights Reserved.</p>
 
                 <div class="d-flex align-items-center ">
                     <p class="mb-0 me-2">Follow us on</p>
